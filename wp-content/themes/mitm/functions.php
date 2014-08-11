@@ -98,6 +98,8 @@ function mitm_scripts() {
 
 	wp_enqueue_script( 'mitm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'mitm-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ));
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
