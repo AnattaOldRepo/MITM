@@ -11,11 +11,14 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'mitm' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'mitm' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mitm' ), 'mitm', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+		<div class="copy-right">
+			<?php echo get_field( 'copyright', 'option' ) ?>
 		</div><!-- .site-info -->
+		<div class="social-links">
+			<a href="#">Facebook</a>
+			<a href="#">Twitter</a>
+			<a href="#">Pinterest</a>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
