@@ -27,7 +27,35 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-
+		<!-- Contact form -->
+		<div class="contact-info hide" style="display:none">
+			<div class="contact-left">
+				<div class="text">
+					<?php echo get_field( 'contact_text', 'option' ) ?>
+				</div>
+				<div class="email">
+					you can right me at: <span><?php echo get_field( 'contact_email', 'option' ) ?></span>
+				</div>
+				<div class="phone">
+					call at: <span><?php echo get_field( 'contact_phone', 'option' ) ?></span>
+				</div>
+				<div class="social-links">
+					<a href="#">Facebook</a>
+					<a href="#">Twitter</a>
+					<a href="#">Pinterest</a>
+				</div>
+			</div>
+			<div class="contact-right">
+				<form>
+					<div>Or drop a line here</div>
+					<input name="name" type="text">
+					<input name="email" type="text">
+					<textarea name="content"></textarea>
+					<button name="Send">Send</button>
+				</form>
+			</div>
+		</div>
+		<!-- end contact form -->
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Primary Menu', 'mitm' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
