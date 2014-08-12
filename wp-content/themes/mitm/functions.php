@@ -130,3 +130,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Ajax handler
+ */
+require get_template_directory() . '/inc/ajax-handler.php';

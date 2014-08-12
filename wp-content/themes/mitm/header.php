@@ -46,13 +46,17 @@
 				</div>
 			</div>
 			<div class="contact-right">
-				<form>
+				<p class="error"></p>
+				<form class="contact-info-form" name="contact-form">
 					<div>Or drop a line here</div>
 					<input name="name" type="text">
 					<input name="email" type="text">
 					<textarea name="content"></textarea>
-					<button name="Send">Send</button>
+					<button type="submit">Send</button>
 				</form>
+				<div class="success">
+					Thank you for contacting us. we will get back to you soon.
+				</div>
 			</div>
 		</div>
 		<!-- end contact form -->
