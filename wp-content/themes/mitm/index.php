@@ -28,6 +28,9 @@ get_header(); ?>
 						<li><a href="#">Pinterest</a></li>
 					</ul>
 				</div>
+				<div class="read-more">
+					<a href="<?php the_permalink() ?>">Read More</a>
+				</div>
 				<div class="post-excerpt">
 					<?php the_excerpt() ; wp_link_pages()?>
 				</div>
