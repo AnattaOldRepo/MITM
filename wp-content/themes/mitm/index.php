@@ -20,27 +20,26 @@ get_header(); ?>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
+				<h1><?php the_title() ?></h1>
+				<div class="social-links">
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="post-excerpt">
+					<?php the_excerpt() ; wp_link_pages()?>
+				</div>
 			<?php endwhile; ?>
 
-			<?php mitm_paging_nav(); ?>
+			<?php wp_paginate(); ?>
 
 		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
