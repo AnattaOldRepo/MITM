@@ -6,27 +6,27 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'content', 'single' ); ?>
-
-			<?php mitm_post_nav(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // end of the loop. ?>
-
+			<?php while ( have_posts() ) : the_post(); ?>
+				<h1><?php the_title() ?></h1>
+				<div class="social-links">
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Pinterest</a></li>
+					</ul>
+				</div>
+				<div class="post-content">
+					<?php the_content() ?>
+				</div>
+				<div class="post-pagination">
+					<div class="left"><?php next_post_link( '%link &laquo;', 'NEWER POSTS') ?></div>
+					<div class="right"><?php previous_post_link( '%link &laquo;', 'OLDER POSTS' ) ?></div>
+				</div>
+			<?php endwhile; // end of the loop. ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php get_footer() ?>
 <?php get_footer(); ?>
