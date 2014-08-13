@@ -10,6 +10,9 @@ get_header(); ?>
 			include locate_template( 'acf-layouts/home-' . $field[ 'acf_fc_layout' ] . '.php' );
 		}
 	?>
+	<div class="bottom-text-section">
+		<?php get_field( 'bottom_content' ) ?>
+	</div>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer(); ?>s
