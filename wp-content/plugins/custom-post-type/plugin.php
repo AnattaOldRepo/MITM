@@ -30,11 +30,7 @@ class AnattaDesign_Custom_Post_Types {
 			'supports' => array(
 				'title',
 				'editor',
-				'author',
 				'thumbnail',
-				'custom-fields',
-				'revision',
-				'excerpt'
 			)
 		);
 
