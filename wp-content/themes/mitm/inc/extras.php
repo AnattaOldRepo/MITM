@@ -87,3 +87,14 @@ function mitm_setup_author() {
 	}
 }
 add_action( 'wp', 'mitm_setup_author' );
+
+function mitm_option_page_setting( $options ) {
+	$options['pages'] = array(
+		__('Contact'),
+		__('Footer'),
+		__('Mail Chimp Integration')
+	);
+
+	return $options;
+}
+add_filter( 'acf/options_page/settings', 'mitm_option_page_setting' );
