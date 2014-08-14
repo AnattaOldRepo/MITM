@@ -19,7 +19,7 @@ class AnattaDeign_Mitm_Ajax_Handler {
 		$contact_email = get_field( 'contact_email', 'option' );
 		$contact_subject = get_field( 'contact_subject', 'option' );
 
-		if ( $from_email && isset( $from_email ) && ! empty( $from_email ) ) {
+		if ( ! empty( $from_email ) ) {
 			$email_body = 'Customer Name: ' . $name . "\n";
 			$email_body .= 'Customer Email: ' . $from_email . "\n";
 			$email_body .= 'Customer Content: ' . $content . "\n";
