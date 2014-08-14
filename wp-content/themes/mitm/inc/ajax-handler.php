@@ -4,6 +4,9 @@ class AnattaDeign_Mitm_Ajax_Handler {
 	public function __construct() {
 		add_action( 'wp_ajax_send_contact_query', array( $this, 'send_contact_email' ) );
 		add_action( 'wp_ajax_nopriv_send_contact_query', array( $this, 'send_contact_email' ) );
+
+		add_action( 'wp_ajax_subscribe_newsletter', array( $this, 'subscribe_user_on_mailchimp' ) );
+		add_action( 'wp_ajax_nopriv_subscribe_newsletter', array( $this, 'subscribe_user_on_mailchimp' ) );
 	}
 
 	public function send_contact_email() {
@@ -42,6 +45,28 @@ class AnattaDeign_Mitm_Ajax_Handler {
 					'message' => "We could not register this request at this time, please email us at $contact_email."
 				)
 			);
+		}
+		die();
+	}
+
+	public function subscribe_user_on_mailchimp() {
+		$user_email = isset( $_POST['email'] ) ? $_POST['email'] : false;
+
+		if ( ! empty( $user_email )) {
+			if ( class_exists( 'AnattaDesign_Mailchimp' ) && AnattaDesign_Mailchimp::subscribe( $user_email ) ) {
+				echo json_encode(
+					array(
+						'status' => 1
+					)
+				);
+			} else {
+				echo json_encode(
+					array(
+						'status' => 0,
+						'message' => "There was an error during registration."
+					)
+				);
+			}
 		}
 		die();
 	}
