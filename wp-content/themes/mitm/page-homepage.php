@@ -11,7 +11,7 @@ get_header(); ?>
 		}
 	?>
 	<div class="bottom-text-section">
-		<?php get_field( 'bottom_content' ) ?>
+		<?php the_content() ?>
 	</div>
 </div>
 

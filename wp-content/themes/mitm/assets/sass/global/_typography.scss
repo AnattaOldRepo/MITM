@@ -1,0 +1,190 @@
+//
+// Typography
+// --------------------------------------------------
+
+%heading-level-1 {
+    @include font-shorthand(42px, normal, 58px);
+}
+
+%heading-level-2 {
+    @include font-shorthand(40px, normal, 58px);
+}
+
+%heading-level-3 {
+    @include font-shorthand(38px, normal, 58px);
+}
+
+%heading-level-4 {
+    @include font-shorthand(36px, normal, 58px);
+}
+
+%heading-level-5 {
+    @include font-shorthand(34px, normal, 58px);
+}
+
+%heading-level-6 {
+    @include font-shorthand(32px, normal, 58px);
+}
+
+%heading-level-7 {
+    @include font-shorthand(30px, normal, 58px);
+}
+
+%heading-level-8 {
+    @include font-shorthand(28px, normal, 58px);
+}
+
+%heading-level-9 {
+    @include font-shorthand(26px, normal, 58px);
+}
+
+%heading-level-10 {
+    @include font-shorthand(24px, normal, 58px);
+}
+
+%heading-level-11 {
+    @include font-shorthand(22px, normal, 58px);
+}
+
+%heading-level-12 {
+    @include font-shorthand(20px, normal, normal);
+}
+
+// Pharagraph
+//------------------------------
+
+%pharagraph-level-1 {
+    @include font-shorthand(18px, normal, normal);
+}
+
+%pharagraph-level-2 {
+    @include font-shorthand(17px, normal, normal);
+}
+
+%pharagraph-level-3 {
+    @include font-shorthand(16px, normal, normal);
+}
+
+%pharagraph-level-4 {
+    @include font-shorthand(15px, normal, normal);
+}
+
+%pharagraph-level-5 {
+    @include font-shorthand(14px, normal, normal);
+}
+
+%pharagraph-level-6 {
+    @include font-shorthand(13px, normal, normal);
+}
+
+%pharagraph-level-7 {
+    @extend %Raleway;
+    @include font-shorthand(12px, normal, normal);
+}
+
+%acticle {
+    @extend %merriweather;
+    font-size: 21px; 
+    font-weight: 400;
+    line-height: 34px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+p {
+    @extend %pharagraph-level-5;
+    line-height: 1.7em;
+    padding-bottom: 25px;
+    &.wp-caption-text {
+        text-align: center;
+    }
+}
+
+ol,ul,p {
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+/*li {
+    &:before {
+        color: $Blue;
+        position: absolute;
+        left: -16px;
+        top: 0px;
+        font-size: 17px;
+    }
+    @extend %pharagraph-level-5;
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.7em;
+    a {
+        color: $Blue;
+    }
+}
+
+ol,ul {
+    margin-bottom: 25px;
+}
+
+ol {
+    counter-reset: item;
+    margin-left: 20px;
+    li {
+        &:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+        }
+    }
+}
+
+ul {
+    margin-left: 21px;
+    li {
+        &:before {
+            content: "\2022";
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+}
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+h1 {
+    @extend %heading-level-10;
+}
+
+h2 {
+    @extend %heading-level-11;
+}
+
+h3 {
+    @extend %heading-level-12;
+}
+
+h4 {
+    @extend %pharagraph-level-1;
+}
+
+h5 {
+    @extend %pharagraph-level-2;
+}
+
+h6 {
+    @extend %pharagraph-level-3;
+}

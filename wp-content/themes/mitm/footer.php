@@ -19,13 +19,15 @@
 		</div>
 	<?php } ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="copy-right">
+		<div class="container">
+			<div class="copy-right">
 			<?php echo get_field( 'copyright', 'option' ) ?>
-		</div><!-- .site-info -->
-		<div class="social-links">
-			<a href="#">Facebook</a>
-			<a href="#">Twitter</a>
-			<a href="#">Pinterest</a>
+			</div><!-- .site-info -->
+			<div class="social-links">
+				<a class="facebook" href="#">Facebook</a>
+				<a class="twitter" href="#">Twitter</a>
+				<a class="pinterest" href="#">Pinterest</a>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

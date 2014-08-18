@@ -45,4 +45,13 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<script type="text/javascript">
+  $(document).ready(function(){
+  		$('.bxslider').bxSlider({
+		  mode: 'fade',
+		  captions: true
+		});
+  });
+</script>
+
 <?php get_footer(); ?>

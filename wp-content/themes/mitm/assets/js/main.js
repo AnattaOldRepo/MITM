@@ -35,5 +35,8 @@
 				}, "json");
 			return false;
 		});
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider();
+		});
 	});
 })(jQuery);

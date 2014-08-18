@@ -1,0 +1,30 @@
+//
+// Layout
+// --------------------------------------------------
+
+body{
+	@extend %merriweather;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-size: $font-size-base;
+	color: $text-color;
+    //&.ugly-os{
+      //  -webkit-text-stroke: 0.3px;
+    // }
+}
+
+.wrapper{
+    width: $site-width;
+    @extend %block-center;
+    .wp-caption {
+        text-align: center;
+    }
+}
+
+*{
+	@include box-sizing(border-box);
+}
+
+#content{
+	 
+}
