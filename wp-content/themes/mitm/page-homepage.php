@@ -13,6 +13,7 @@ get_header(); ?>
 	<div class="bottom-text-section">
 		<?php the_content() ?>
 	</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>

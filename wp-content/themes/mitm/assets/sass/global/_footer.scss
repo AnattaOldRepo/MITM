@@ -10,25 +10,16 @@
     width: 100%;
     @extend %pharagraph-level-7;
     .copy-right {
+        
+        font-size: 16px;
+        margin: 12px 0 0 19px;
+
         @extend %pull-left;
     }
     .social-links {
+        margin: -3px 16px 0 0;
         @extend %pull-right;
-        a {
-            display: inline-block;
-            text-indent: 99999px;
-            margin-right: 18px;
-            @include size(47px, 48px);
-            &.facebook {
-                @include bg-img-center(fb, png);
-            }
-            &.twitter {
-                @include bg-img-center(twt, png);
-            }
-            &.pinterest {
-                @include bg-img-center(pinterest, png);
-            }
-        }
+        
     }
     @media (max-width: $screen-sm-min) {
         width: 100%;
