@@ -1,0 +1,63 @@
+//
+// Header
+// --------------------------------------------------
+
+.site-header {
+    @include clearfix;
+    font-size: 13px;
+     
+    .wrapper {
+        padding: 10px 0 0 71px;
+        position: relative;
+    }
+    .header-section {
+        padding: 0 ;
+
+        .logo {
+            margin: 14px 0 0 56px; 
+            
+            @extend %pull-left;
+            a {
+                @include size(78px, 83px);
+                @include bg-img(logo-tab, png);
+                display: block;
+                background-size: 100%;
+                text-indent: 99999px;
+                font-size: 0;
+            }
+        }
+        // Main Navigation
+        .main-navigation {
+            padding: 0;
+            margin: 0px 35px 0 0;
+            @extend %pull-right;
+            @extend %Raleway;
+            li {
+                margin: 0 20px 0 27px;
+                padding: 34px 0 0;
+                @extend %pull-left;
+                @include transition(all 0.5s ease);
+                a {
+                    color: $Black;
+                    font-size: 16px;
+                    padding: 20px 20px 10px;
+                    display: block;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &:hover {
+                        color: lighten($Black, 50%);
+                    }
+                }
+                &.contact-us {
+                    background-color: $LightGray;
+                    @extend %text-center;
+                    @include bg-img-center(orange_arrow, png);
+                    @include size(100px, auto);
+                    a {
+                        padding: 10px 0px 25px;
+                    }
+                }
+            }
+        }
+    }
+}
