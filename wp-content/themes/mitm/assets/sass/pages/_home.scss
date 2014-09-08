@@ -24,9 +24,12 @@
         figure {
             background: url(../images/net_img.png) repeat-x left top;
             img {
-                position: relative;
-                z-index: -1;
-                width: 100%;
+            position: relative;
+            z-index: -1;
+            width: auto;
+            height: 370px; 
+            margin: auto;
+            @media (max-width: $screen-sm-min) { width: 100%;}
             }
         }
         .bx-controls-direction {
@@ -171,93 +174,16 @@
             }
         }
     }
-    .contact-info {
-        color: $White;
-        padding: 30px 50px;
-        position: relative;
-        background-color: $Gray;
-        @media (max-width: $screen-sm-min) {
-            @include size(768px, 340px);
-            @include bg-img-center(contact-ng, png);
-            background-size: 100%;
-        }
-        .close-box {
-            position: absolute;
-            top: 27px;
-            right: 20px;
-            @include size(26px, 28px);
-            @include bg-img-center(orange_close, png);
-        }
-        .left {
-            padding: 40px 0 0 0;
-            p {
-                @extend %merriweather;
-                font-size: 13px;
-                width: 300px;
-                line-height: 1.7em;
-                padding-bottom: 18px;
-                span, a {
-                    color: $Orange;
-                    text-decoration: none;
-                    font-style: italic;
-                }
-            }
-            .social-links {
-                margin-top: 15px;
-                a {
-                    background-position: center -3px;
-                    margin: 1px 11px 0 2px;
-                    width: 42px;
-                    border-radius: 2px;
-                    height: 41px;
-                }
-            }
-        }
-        .right {
-            padding: 0;
-            .contact {
-                @extend %text-center;
-                .title-section {
-                    color: $BdColor3;
-                    font-style: italic;
-                    margin-bottom: 10px;
-                }
-                .form {
-                    width: 86%;
-                    float: right;
-                    .input-text {
-                        @extend %input-text;
-                        margin-bottom: 15px;
-                        &:focus {
-                            -webkit-box-shadow: 0px 0px 2px white;
-                            -moz-box-shadow: 0px 0px 2px white;
-                            box-shadow: 0px 0px 2px white;
-                            border: 1px solid white;
-                        }
-                    }
-                    input {
-                        @include size(100%, 38px);
-                    }
-                    textarea {
-                        padding: 10px;
-                        @include size(100%, 78px);
-                    }
-                }
-                .button {
-                    @include size(100%, auto);
-                    cursor: pointer;
-                }
-            }
-        }
-    }
+    
 }
 
 .dummy_class {
-    display: block !important;
+   // display: block !important;
+    overflow: hidden;
 }
 
 #welcome-screen {
-    display: none;
+    //display: none;
 }
 
 @media (max-width: $screen-sm-min) {
@@ -267,8 +193,15 @@
 }
 
 #welcome-screen {
-    @include size(100%, 1024px);
+      padding-top: 127px;
+    @include size(100%, 769px);
+    @include bg-img-center(welcome_l, jpg);
+    @media (max-width: $screen-sm-min) {
+          padding-top: 0;
+        @include size(100%, 1024px);
     @include bg-img-center(welcome, jpg);
+            
+        }
     .logo {
         font-size: 0;
         padding-top: 145px;
@@ -276,10 +209,15 @@
         @include size(100%, 258px);
     }
     #go_btn {
-        margin: 320px auto 0;
+          margin: 158px auto 0;
+        
         display: block;
         font-size: 0;
         @include bg-img-center(welcome_arrow, png);
         @include size(74px, 87px);
+         @media (max-width: $screen-sm-min) {
+            margin: 320px auto 0;
+         }
+
     }
 }

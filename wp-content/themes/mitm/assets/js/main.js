@@ -57,20 +57,14 @@
         });
 
         // show hide home page welcome screen
-        $('#page').hide();
+        $('.page-template-page-homepage-php #page').hide();
         $("#go_btn").on('click', function() {
         	//$('#page').attr('style', 'display: none !important');
-            $('#page').show();
+            $('.page-template-page-homepage-php #page').show();
             $("#welcome-screen").slideUp("slow");
             return false;
         });
 
-        var winW = jQuery(window).width();
-	    if (winW > 780)
-	        jQuery("#page").addClass("dummy_class");
-	    
-	    else if (winW > 769)
-	        jQuery("#page").removeClass("dummy_class");
-	    else {}
+        
 	});
 })(jQuery);
