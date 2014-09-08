@@ -31,7 +31,8 @@
 					
 					<!-- Contact form -->
 					<div class="contact-info" style="display:none">
-						<a href="" class="close-box"></a>
+						<div class="container">
+
 						<div class="col-sm-6 col-md-6 col-lg-6 left">
 							<p>
 							<?php echo get_field( 'contact_text', 'option' ) ?>
@@ -50,15 +51,18 @@
 						</div>
 						
 						<div class="col-sm-6 col-md-6 col-lg-6 right">
+							<a href="" class="close-box"></a>
+
 							<div class="contact">
 								<div class="title-section">
-									drop a line here
+									or, drop a line here
 								</div>
 								<p class="error"></p>
 								<form class="contact-info-form" name="contact-form">
 									<div class="form">
 										<input name="name" type="text" class="name input-text" placeholder="name">
 										<input name="email" type="text" class="email input-text" placeholder="email id">
+										<span>lorem ipsum dolor isut</span>
 										<textarea name="message" class="input-text" placeholder="Hello! Your message."></textarea>
 										<input type="submit" class="button orange" value="send">
 									</div>
@@ -71,6 +75,7 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
+						</div>
 					</div>
 					<div class="container header-section">
 						<div class="row">

@@ -3,7 +3,53 @@
 // --------------------------------------------------
 
 .about-page {
-   
-      
+    margin-bottom: 65px;
+    h2 {
+        @extend %text-center;
+        @extend %heading-level-2;
+        font-style: italic;
+        margin-top: 35px;
+    }
+    .roman-no {
+        @extend %text-center;
+        @extend %pharagraph-level-1;
+        margin: 35px 0 20px 0;
+    }
+    .about_imgs_set {
+        margin: 50px 48px 55px;
+        img {
+            margin-bottom: 16px;
+        }
+        figcaption {
+            margin-top: 13px;
+            color: $Orange;
+            @extend %text-center;
+            @extend %heading-level-2;
+            font-style: italic;
+        }
+    }
+    .writer {
+        margin: 0 48px 64px;
+        @include clearfix;
+        img {
+            margin: 8px 25px 0 0px;
+            @extend %pull-left;
+        }
+    }
+    .history {
+        @extend %text-center;
+        p {
+            margin: 26px 67px 38px;
+            letter-spacing: -0.6px;
+        }
+    }
+    .banner-img {
+        @include size(100%, auto);
+        @extend %text-center;
+        @extend %banner-img;
+    }
+    p {
+        margin: 29px 67px 38px;
+        text-align: center;
+    }
 }
-

@@ -7,7 +7,10 @@
 }
 
 %heading-level-2 {
-    @include font-shorthand(40px, normal, 58px);
+    @include font-shorthand(34px, normal, 40px);
+     @extend %Lobstertwo;
+    font-style: italic;
+
 }
 
 %heading-level-3 {
@@ -15,6 +18,7 @@
     @extend %Lobstertwo;
     font-style: italic;
 }
+
 %heading-level-3 {
      
 }
@@ -23,7 +27,7 @@
 //------------------------------
 
 %pharagraph-level-1 {
-    @include font-shorthand(18px, normal, normal);
+    @include font-shorthand(21px, normal, 34px);
 }
 
 %pharagraph-level-2 {

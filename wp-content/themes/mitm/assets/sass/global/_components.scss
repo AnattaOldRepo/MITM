@@ -175,3 +175,21 @@ td {
         }
     }
 }
+
+p {
+
+    @extend %pharagraph-level-1;
+}
+%banner-img {
+    figure {
+            background: url(../images/net_img.png) repeat-x left top;
+            img {
+            position: relative;
+            z-index: -1;
+             
+            margin: auto;
+            @media (max-width: $screen-sm-min) { width: 100%;}
+            }
+        }
+}
+
