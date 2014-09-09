@@ -64,7 +64,13 @@
             $("#welcome-screen").slideUp("slow");
             return false;
         });
-
+        /*-----------Studio Page slide up/down-------*/
+        $('.article').hide();
+        $('.tool-index h4').on('click', function() {
+            $(this).toggleClass("active"); 
+            $(this).siblings('.article').slideToggle(500);
+        });
+        /*-----------Studio Page slide up/down-------*/
         
 	});
 })(jQuery);

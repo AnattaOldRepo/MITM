@@ -11,11 +11,13 @@
 	</div><!-- #content -->
 	<?php if ( ! is_page_template( 'page-homepage.php' ) && ! is_page_template( 'page-about.php' ) ) { ?>
 		<div class="subscribe-form-wrapper">
-			<form class="subscribe-form" name="newlsetter-form">
-				<input type="text" name="email">
-				<button type="submit">submit</button>
-			</form>
-			<div class="success message" style="display:none">Thank for subscribing us!</div>
+			<div class="page-section ">
+				<form class="subscribe-form" name="newlsetter-form">
+					<input type="text" name="email" placeholder="YOUR EMAIL ADDRESS HERE" >
+					<button type="submit">Know More</button>
+				</form>
+				<div class="success message" style="display:none">Thank for subscribing us!</div>
+			</div>
 		</div>
 	<?php } ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">

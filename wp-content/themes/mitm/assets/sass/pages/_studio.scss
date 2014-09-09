@@ -1,5 +1,201 @@
 //
-// Home page 
+// about page 
 // --------------------------------------------------
-.home {
+.studio-page {
+    margin-bottom: 65px;
+    h2 {
+        @extend %text-center;
+        @extend %heading-level-2;
+        font-style: italic;
+        margin: 35px 0 30px;
+    }
+    h4 {
+        @extend %text-center;
+        @extend %heading-level-5;
+        margin-top: 35px;
+    }
+    .roman-no, .roman-no2 {
+        @extend %text-center;
+        @extend %roman-no-1;
+        margin: 35px 0 12px 0;
+    }
+    .roman-no-2 {
+        @extend %text-center;
+        @extend %roman-no-2;
+    }
+    .banner-img {
+        margin: auto;
+        @include size(960px, auto);
+        @extend %text-center;
+        @extend %banner-img;
+    }
+    p {
+        margin: 35px 4px 30px;
+        @extend %text-center;
+    }
+    .orange-patterns {
+        color: $White;
+        padding-top: 30px;
+        margin: 38px auto 38px;
+        @include bg-img-center(orange-patterns, png);
+        @include size(960px, 100px);
+        @media (max-width: $screen-sm-min) {
+            @include size(auto, 100px);
+        }
+        h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+    .gray-patterns {
+        color: $White;
+        padding-top: 30px;
+        margin: auto;
+        @include bg-img-center(gray-patterns, png);
+        @include size(960px, 100px);
+        @media (max-width: $screen-sm-min) {
+            @include size(auto, 100px);
+        }
+        h2 {
+            margin: 0;
+        }
+    }
+    .writer-section {
+        figure {
+            margin: 41px 0 65px;
+        }
+        h4 {
+            margin-top: 40px;
+            &.toolheading {
+                margin: 20px 0 26px;
+            }
+        }
+        p {
+            margin: 25px 4px 65px;
+        }
+        .tools-list {
+            border-top: 1px solid $BdColor4;
+            border-bottom: 1px solid $BdColor4;
+            background-color: $BgColor3;
+            padding: 29px 0 7px;
+            margin-bottom: 60px;
+            ul {
+                margin: 0 2px 0 59px;
+                display: inline-block;
+                li {
+                    margin-bottom: 20px;
+                    width: 160px;
+                    border: 1px solid $BdColor5;
+                    //@extend %pull-left;
+                    a {
+                        display: block;
+                        color: $text-color3;
+                        text-decoration: none;
+                        padding: 5px;
+                        @extend %list-level-1;
+                        @include box-shadow(0 2px 2px $BdColor5);
+                        &:hover, &.active {
+                            color: $White;
+                            background-color: $text-color2;
+                        }
+                    }
+                }
+            }
+            ul.block-two {
+                margin: 0 10px 0 59px;
+                li a {
+                    padding: 5px 5px 5px 12px;
+                }
+            }
+            ul.block-three {
+                margin: 0 10px 0 53px;
+                li {
+                    width: 108px;
+                }
+            }
+        }
+    }
+    .tool-index {
+        margin-bottom: 72px;
+        figure {
+            margin: 0;
+            img {
+                width: 100%;
+            }
+        }
+        h4 {
+            cursor: pointer;
+            margin: 0;
+            padding: 12px 34px 15px 40px;
+            font-style: italic;
+            @extend %text-left;
+            @extend %Lobstertwo;
+            background-color: $BgColor;
+            color: $White;
+            span {
+                margin-top: 10px;
+                @extend %pull-right;
+                @include size(33px, 18px);
+                @include bg-img-center(sprite / arrow_dwn_white, png);
+            }
+            &.active {
+                background-color: $Orange;
+                span {
+                    @include bg-img-center(sprite / arrow_up_white, png);
+                }
+            }
+        }
+        .article {
+            //display: none;
+            border-bottom: 1px solid $BdColor;
+            padding: 32px 40px;
+            line-height: 34px;
+            @extend %article;
+        }
+        &::nth-child(4) {
+            border: 1px solid blue;
+        }
+        &::nth-child(5) {
+            border: 1px solid red;
+        }
+    }
+    .bottom-content h4 {
+        margin: -19px 0 -9px;
+    }
+}
+
+.page-template-page-studio-php {
+    .subscribe-form-wrapper {
+        margin:40px auto 0;
+        @include size(960px, 136px);
+        @include bg-img-center(about-footer-bg, jpg);
+    }
+}
+
+.subscribe-form {
+	padding-top: 46px;
+    input {
+    	text-transform: uppercase;
+    	text-align: center;
+    	color: $text-color4;
+    	padding: 0 10px;
+    	margin-left: 54px;
+    	@extend %Raleway;
+    	border:1px solid $BdColor6;
+    	margin-right: 10px; 
+        @include size(370px, 55px);
+    }
+    button {
+    	text-transform: uppercase;
+    	text-align: center;
+    	color: $White;
+    	border: 0 none;
+    	font-size: 16px;
+    	@extend %Raleway;
+    	font-weight: 500px;
+    	@include bg-img-center(button-bg, jpg);
+    	@include size(184px, 55px);
+    }
+
 }

@@ -45,7 +45,7 @@
         p {
             margin: 14px 30px 0;
             @extend %text-center;
-            @extend %acticle;
+            @extend %article;
         }
     }
     .collection-post {
@@ -152,7 +152,7 @@
         article {
             width: 505px;
             line-height: 34px;
-            @extend %acticle;
+            @extend %article;
             @extend %pull-right;
             .more {
                 margin-top: 24px;

@@ -18,7 +18,11 @@
     @extend %Lobstertwo;
     font-style: italic;
 }
-
+%heading-level-5 {
+    @include font-shorthand(25px, 500, 34px);
+    @extend %Raleway;
+    
+}
 %heading-level-3 {
      
 }
@@ -55,7 +59,20 @@
     @include font-shorthand(12px, normal, normal);
 }
 
-%acticle {
+%list-level-1 {
+    @extend %Raleway;
+    @include font-shorthand(19px, normal, 25px);
+}
+%roman-no-1 {
+    @extend %MyriadPro;
+    @include font-shorthand(17px, normal, 25px);
+}
+%roman-no-2 {
+    @extend %MyriadPro;
+    @include font-shorthand(12px, normal, 14px);
+}
+
+%article {
     @extend %merriweather;
     font-size: 21px; 
     font-weight: 400;

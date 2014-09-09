@@ -2,18 +2,18 @@
 // Layout
 // --------------------------------------------------
 
-body{
-	@extend %merriweather;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	font-size: $font-size-base;
-	color: $text-color;
+body {
+    @extend %merriweather;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: $font-size-base;
+    color: $text-color;
     //&.ugly-os{
-      //  -webkit-text-stroke: 0.3px;
+    //  -webkit-text-stroke: 0.3px;
     // }
 }
 
-.wrapper{
+.wrapper {
     width: $site-width;
     @extend %block-center;
     .wp-caption {
@@ -21,10 +21,16 @@ body{
     }
 }
 
-*{
-	@include box-sizing(border-box);
+* {
+    @include box-sizing(border-box);
 }
 
-#content{
-	 
+#content {}
+
+.page-section {
+    width: 670px;
+    margin: 0 auto;
+    @media (max-width: $screen-xs-max) {
+        width: 320px;
+    }
 }
