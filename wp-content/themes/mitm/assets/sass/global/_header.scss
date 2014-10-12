@@ -5,7 +5,6 @@
 .site-header {
     @include clearfix;
     font-size: 13px;
-     
     .wrapper {
         padding: 10px 0 0 71px;
         position: relative;
@@ -14,28 +13,40 @@
         color: $White;
         padding: 40px 0px 30px 0px;
         position: relative;
-        //background: url("../images/contact-bg.png) 
+        //background: url("../images/contact-bg.png)
         @include bg-img(contact-bg, png);
         background-color: $Gray;
-        @media (max-width: $screen-sm-min) {
+        @media (max-width: $screen-tablet) {
             @include size(768px, 340px);
             @include bg-img-center(contact-ng, png);
             background-size: 100%;
         }
-
+        @media (max-width: $screen-phone) {
+            @include size(auto, auto);
+            background-color: $Gray;
+            //@include bg-img-center(contact-ng, png);
+            background-size: 100%;
+        }
         .left {
             padding: 30px 0 0 0;
-            p {
-                @extend %merriweather;
-                font-size: 13px;
+            .contact_text {
                 width: 300px;
-                line-height: 1.7em;
-                padding-bottom: 18px;
                 margin-left: 28px;
-                span, a {
-                    color: $Orange;
-                    text-decoration: none;
-                    font-style: italic;
+                @extend %pull-left;
+                p {
+                    @extend %merriweather;
+                    font-size: 13px;
+                    line-height: 1.7em;
+                    padding-bottom: 18px;
+                    span, a {
+                        color: $Orange;
+                        text-decoration: none;
+                        font-style: italic;
+                    }
+                }
+                @media (max-width: $screen-phone) {
+                    margin-left: 0px;
+                    width: 200px;
                 }
             }
             .social-links {
@@ -46,7 +57,6 @@
                     width: 42px;
                     border-radius: 2px;
                     height: 41px;
-                     
                 }
             }
         }
@@ -61,7 +71,6 @@
                     font-style: italic;
                     margin-bottom: 10px;
                 }
-
                 .form {
                     width: 86%;
                     float: right;
@@ -86,7 +95,7 @@
                         color: $Orange;
                         font-style: italic;
                         font-size: 11px;
-                        margin: -10px 0 10px;
+                        margin: -5px 0 10px;
                         display: block;
                     }
                 }
@@ -96,21 +105,108 @@
                 }
             }
             .close-box {
-            position: absolute;
-            top: -15px;
-            right: -4px;
-             z-index: 1;
-            @include size(26px, 28px);
-            @include bg-img-center(orange_close, png);
+                position: absolute;
+                top: -15px;
+                right: -4px;
+                z-index: 1;
+                @include size(26px, 28px);
+                @include bg-img-center(orange_close, png);
+            }
         }
+        @media (max-width: $screen-phone) {
+            @include size(auto, auto);
+            background: $Gray;
+            padding: 30px 0;
+            .left {
+                padding: 0;
+                margin-left: 0px;
+                .contact_text {
+                    width: 220px;
+                    .email {
+                        padding-bottom: 0;
+                    }
+                }
+                .social-links {
+                    float: right;
+                    margin: 0;
+                    padding: 0;
+                    width: 45px;
+                    a {
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+            background-size: 100%;
+            .right {
+                float: none;
+                clear: both;
+                .close-box {
+                    display: none;
+                }
+                .contact {
+                    margin: 0;
+                    .title-section {
+                        text-align: left;
+                    }
+                    .form {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .mob-nav {
+        display: none;
+        ul {
+            li {
+                border-bottom: 1px solid $White;
+                a {
+                    display: block;
+                    background-color: $BgColor4;
+                    color: $Black;
+                    padding: 15px 0;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    @extend %Raleway;
+                    @extend %text-center;
+                    @extend %pharagraph-level-3;
+                    &:hover, &.active {
+                        color: $White;
+                        background-color: $Orange;
+                        //@include bg-img-only(close_s, png, no-repeat, 97%, center);
+                   
+                    }
+                    &.active {
+                        @include bg-img-only(close_s, png, no-repeat, 97%, center);
+                    }
+                }
+            }
+        }
+        @media (max-width: $screen-phone) {
+            display: block;
+        }
+    }
+    .mob-menu {
+        float: right;
+        display: none;
+        margin: 30px 40px 0 0;
+        @include size(40px, 40px);
+        a {
+            display: block;
+            @include size(40px, 40px);
+            @include bg-img(menu-icon, png);
+            &:hover, &.active {
+                @include bg-img(menu-icon_o, png);
+            }
+        }
+        @media (max-width: $screen-phone) {
+            display: block;
         }
     }
     .header-section {
-        padding: 0 ;
-
+        padding: 0;
         .logo {
-            margin: 14px 0 0 56px; 
-            
+            margin: 14px 0 0 56px;
             @extend %pull-left;
             a {
                 @include size(78px, 83px);
@@ -119,6 +215,13 @@
                 background-size: 100%;
                 text-indent: 99999px;
                 font-size: 0;
+            }
+            @media (max-width: $screen-phone) {
+                margin: 10px 0 10px 56px;
+                a {
+                    @include bg-img(logo-s, png);
+                    @include size(63px, 65px);
+                }
             }
         }
         // Main Navigation
@@ -155,13 +258,14 @@
                     }
                 }
                 &.current-menu-item {
-                    a{
+                    a {
                         border-bottom: 5px solid #000;
                     }
-
                 }
+            }
+            @media (max-width: $screen-phone) {
+                display: none;
             }
         }
     }
-
 }

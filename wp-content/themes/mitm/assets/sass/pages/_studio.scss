@@ -25,7 +25,7 @@
     }
     .banner-img {
         margin: auto;
-        @include size(960px, auto);
+        @extend %width-960;
         @extend %text-center;
         @extend %banner-img;
     }
@@ -37,11 +37,11 @@
         color: $White;
         padding-top: 30px;
         margin: 38px auto 38px;
+        height: 100px;
+        @extend %width-960;
         @include bg-img-center(orange-patterns, png);
-        @include size(960px, 100px);
-        @media (max-width: $screen-sm-min) {
-            @include size(auto, 100px);
-        }
+        
+         
         h2 {
             margin: 0;
             font-size: 28px;
@@ -52,11 +52,10 @@
         color: $White;
         padding-top: 30px;
         margin: auto;
+        height: 100px;
+        @extend %width-960;
         @include bg-img-center(gray-patterns, png);
-        @include size(960px, 100px);
-        @media (max-width: $screen-sm-min) {
-            @include size(auto, 100px);
-        }
+         
         h2 {
             margin: 0;
         }
@@ -167,13 +166,13 @@
 
 .page-template-page-studio-php {
     .subscribe-form-wrapper {
-        margin:40px auto 0;
-        @include size(960px, 136px);
+        //margin:40px auto 0;
+        //@include size(960px, 136px);
         @include bg-img-center(about-footer-bg, jpg);
     }
 }
 
-.subscribe-form {
+/*.subscribe-form {
 	padding-top: 46px;
     input {
     	text-transform: uppercase;
@@ -198,4 +197,4 @@
     	@include size(184px, 55px);
     }
 
-}
+}*/

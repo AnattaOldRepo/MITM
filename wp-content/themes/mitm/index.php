@@ -12,36 +12,48 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<div id="primary" class="blog-page">
+		<div class="banner-img">
+		<figure>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg"  />
+		</figure>
+	</div>
+		<div id="main" class="container" role="main">
 		<?php if ( have_posts() ) : ?>
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title() ?></h1>
+				<div class="post-section">
+					<section>
+						<div class="post-title"><?php the_title() ?></div>
+						<div class="post-image"><?php the_post_thumbnail() ?></div>
+					<div class="post-detail">
+						<?php the_excerpt() ; wp_link_pages()?>
+					</div>
+					</section>
 				<div class="social-links">
 					<ul>
-						<li><a href="#">Facebook</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Pinterest</a></li>
+						<li class="facebook"><a href="#">Facebook</a></li>
+						<li class="twitter"><a href="#">Twitter</a></li>
+						<li class="pinterest"><a href="#">Pinterest</a></li>
 					</ul>
 				</div>
 				<div class="read-more">
 					<a href="<?php the_permalink() ?>">Read More</a>
 				</div>
-				<div class="post-excerpt">
-					<?php the_excerpt() ; wp_link_pages()?>
+
 				</div>
 			<?php endwhile; ?>
-
-			<?php wp_paginate(); ?>
+			
+			
 
 		<?php else : ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+		</div><!-- #main -->
+		<div class="container blog-paging">
+				<?php wp_paginate(); ?>
+			</div>
 	</div><!-- #primary -->
 
 <script type="text/javascript">

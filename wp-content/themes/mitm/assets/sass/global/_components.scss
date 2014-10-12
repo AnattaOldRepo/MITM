@@ -29,7 +29,9 @@
 %block-center {
     margin: 0px auto;
 }
-
+%clear-both{
+    clear: both;
+}
 //------------------------
 .blue-area {
     background: $Blue;
@@ -186,11 +188,15 @@ p {
             img {
             position: relative;
             z-index: -1;
-             
             margin: auto;
-            @media (max-width: $screen-sm-min) { width: 100%;}
+            @media (max-width: $screen-sm-min) { @include size(100%, auto);}
             }
         }
 }
+%width-960 {
+    width: 960px;
+     @media (max-width: $screen-sm-min) { width: 100%;}
+ }
+
 
 

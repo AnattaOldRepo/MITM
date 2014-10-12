@@ -36,6 +36,7 @@ $body-bg: white !default;
 $BgColor: 	#2b292a;
 $BgColor2: 	#808080;
 $BgColor3: 	#f5f5f5;
+$BgColor4:	#DADBDC;
 
 
 $BdColor:	#c7c7c7;
@@ -52,6 +53,7 @@ $text-color: $Gray;
 $text-color2: #333;
 $text-color3: #555555;
 $text-color4: #B3B3B3;
+$text-color5: #999999;
 
 $site-width: 1170px;
 
@@ -159,6 +161,11 @@ $container-md:                 $container-desktop !default;
 $container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
+
+// Small screen / mobile
+$container-mobile:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-sm-min` and up.
+$container-xs:                 $container-mobile !default;
 
 
  

@@ -1,7 +1,9 @@
 (function($) {
     $(document).ready(function() {
+         
         /*----- Contact Us ----------*/
         $('.contact-us').on('click', function() {
+            $('.contact-us a').toggleClass("active");
             $('.contact-info').slideToggle();
         });
         $('.close-box').on('click', function() {
@@ -71,6 +73,16 @@
             $(this).siblings('.article').slideToggle(500);
         });
         /*-----------Studio Page slide up/down-------*/
+       /*-----------Mobile nav slide up/down-------*/
+         $('.mobmenuicon').on('click', function() {
+            $(this).toggleClass("active"); 
+            $('.mob-nav').slideToggle(500);
+            //$("p").removeClass("intro");
+            $('.contact-us a').removeClass("active");
+            $('.contact-info').slideUp(500);
+            return false;
+        });
+        /*-----------Mobile nav slide up/down-------*/
         
 	});
 })(jQuery);

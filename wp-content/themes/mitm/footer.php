@@ -22,14 +22,15 @@
 	<?php } ?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<div class="copy-right">
-			<?php echo get_field( 'copyright', 'option' ) ?>
-			</div><!-- .site-info -->
 			<div class="social-links">
 				<a class="facebook" href="#">Facebook</a>
 				<a class="twitter" href="#">Twitter</a>
 				<a class="pinterest" href="#">Pinterest</a>
 			</div>
+			<div class="copy-right">
+			<?php echo get_field( 'copyright', 'option' ) ?>
+			</div><!-- .site-info -->
+			
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
