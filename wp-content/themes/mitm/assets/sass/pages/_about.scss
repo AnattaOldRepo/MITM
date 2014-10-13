@@ -10,13 +10,35 @@
         font-style: italic;
         margin-top: 35px;
     }
+    p {
+        margin: 29px 5px 38px;
+        text-align: center;
+    }
+    .banner-img {
+        @include size(100%, auto);
+        @extend %text-center;
+        @extend %banner-img;
+    }
     .roman-no {
         @extend %text-center;
         @extend %pharagraph-level-1;
         margin: 35px 0 20px 0;
     }
+    .writer {
+        margin: 0 0 0;
+        @include clearfix;
+        img {
+            margin: 8px 25px 0 0px;
+            @extend %pull-left;
+        }
+        p {
+            margin: 0;
+            @extend %text-left;
+
+        }
+    }
     .about_imgs_set {
-        margin: 50px 48px 55px;
+        margin: 50px 0 55px;
         img {
             margin-bottom: 16px;
         }
@@ -28,14 +50,6 @@
             font-style: italic;
         }
     }
-    .writer {
-        margin: 0 48px 64px;
-        @include clearfix;
-        img {
-            margin: 8px 25px 0 0px;
-            @extend %pull-left;
-        }
-    }
     .history {
         @extend %text-center;
         p {
@@ -43,13 +57,7 @@
             letter-spacing: -0.6px;
         }
     }
-    .banner-img {
-        @include size(100%, auto);
-        @extend %text-center;
-        @extend %banner-img;
-    }
-    p {
-        margin: 29px 67px 38px;
-        text-align: center;
+    .orange_underline{
+        border-bottom: 2px solid $Orange;
     }
 }
