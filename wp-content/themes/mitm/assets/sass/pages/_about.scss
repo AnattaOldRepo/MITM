@@ -4,6 +4,8 @@
 
 .about-page {
     margin-bottom: 65px;
+    @media (max-width: $screen-phone) { 
+        margin-bottom: 0;}
     .page-section {
         padding-top: 6px;
     }
@@ -12,20 +14,51 @@
         @extend %heading-level-2;
         font-style: italic;
         margin-top: 35px;
+        @media (max-width: $screen-phone) { 
+            margin: 15px 55px;
+             @include font-shorthand(29px, normal, 35px);
+        }
     }
     p {
         margin: 29px 5px 38px;
         text-align: center;
+        @media (max-width: $screen-phone) { 
+            margin: 20px 5px 25px;
+                padding: 0 12px;
+                text-align: center;
+                @include font-shorthand(17px, normal, 31px);
+            }
     }
     .banner-img {
         @include size(100%, auto);
         @extend %text-center;
         @extend %banner-img;
+        @media (max-width: $screen-phone) { 
+            figure {
+                @include size(320px, 205px);
+                img {
+                    display: none;
+                }
+                &.about-page-banner {
+                    @include bg-img-center(mob-about-banner, jpg);
+                }
+            }
+        }
     }
     .roman-no {
         @extend %text-center;
         @extend %pharagraph-level-1;
         margin: 35px 0 20px 0;
+        @media (max-width: $screen-phone) { 
+            margin: 24px 0 14px;;
+             
+            &.desktop_view {
+                display: none;
+            }
+            &.mob_view {
+                display: block;
+            }
+        }
     }
     .writer {
         margin: 0 0 64px;
@@ -37,7 +70,23 @@
         p {
             margin: 0;
             @extend %text-left;
+            @media (max-width: $screen-phone) { 
+                text-align: center;
+                padding: 0 15px;
+                margin-bottom:0;
+                @include font-shorthand(17px, normal, 31px);
+            }
 
+        }
+        @media (max-width: $screen-phone) { 
+            margin-bottom: 0;
+        figure {
+            
+                @include size(178px, 192px);
+                overflow: hidden;
+                margin: 0 auto;
+                text-align: center;
+            }
         }
     }
     .about_imgs_set {
@@ -51,6 +100,21 @@
             @extend %text-center;
             @extend %heading-level-2;
             font-style: italic;
+             @media (max-width: $screen-phone) {  
+                  margin-top: 8px;
+                  padding: 0 10px;
+              @include font-shorthand(23px, normal, 36px);
+        }
+        }
+        @media (max-width: $screen-phone) {  
+             margin: 32px 0 20px;
+            figure {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 8px;
+                }
+            }
         }
     }
     .history {

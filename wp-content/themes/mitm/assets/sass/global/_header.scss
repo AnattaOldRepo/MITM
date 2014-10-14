@@ -189,7 +189,7 @@
     .mob-menu {
         float: right;
         display: none;
-        margin: 30px 40px 0 0;
+        margin: 22px 40px 0 0;
         @include size(40px, 40px);
         a {
             display: block;
@@ -201,6 +201,7 @@
         }
         @media (max-width: $screen-phone) {
             display: block;
+            margin: 22px 63px 0 0;
         }
     }
     .header-section {
@@ -217,7 +218,7 @@
                 font-size: 0;
             }
             @media (max-width: $screen-phone) {
-                margin: 10px 0 10px 56px;
+                margin: 10px 0 10px 73px;
                 a {
                     @include bg-img(logo-s, png);
                     @include size(63px, 65px);
