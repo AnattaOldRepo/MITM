@@ -77,6 +77,7 @@
     font-size: 21px; 
     font-weight: 400;
     line-height: 36px;
+    @media (max-width: $screen-phone) {text-align: center; @include font-shorthand(17px, normal, 31px); }
 }
 
 strong {
