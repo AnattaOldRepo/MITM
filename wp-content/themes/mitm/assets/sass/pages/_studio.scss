@@ -114,6 +114,35 @@
                 }
             }
         }
+        .mobile-tools {
+            border: 1px solid red;
+            .toolboox-title {
+                background-color: $BgColor3;
+                border: 1px solid $BdColor5;
+                color: $text-color3;
+                        text-decoration: none;
+                        padding: 5px;
+                        @extend %list-level-1;
+                        //@include box-shadow(0 2px 2px $BdColor5);
+
+            }
+            .toolboox-content {
+                display: none;
+                figure {
+                    margin: 0;
+                    .toolboox-caption{
+                        background-color: $BgColor;
+            color: $White;
+            text-align: center;
+             @extend %list-level-1;
+             padding: 18PX 0;
+                    }
+                }
+            }
+            .remove {
+                display: none;
+            }
+        }
     }
     .tool-index {
         margin-bottom: 72px;

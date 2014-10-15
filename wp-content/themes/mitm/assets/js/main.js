@@ -83,6 +83,20 @@
             return false;
         });
         /*-----------Mobile nav slide up/down-------*/
+        /*-----------Mobile toll-box up/down-------*/
+        $('.toolboox-title').on('click', function() {
+            $(this).slideUp("100");
+            $(this).next('.toolboox-content').slideDown("500");
+            return false;
+        });
+        $('.toolboox-caption').on('click', function() { 
+            $('.toolboox-title').slideDown("500");
+            $(this).parents(".toolboox-content").slideUp();
+            return false;
+        });
+
+        /*-----------End Mobile toll-box up/down-------*/
+
         
 	});
 })(jQuery);
