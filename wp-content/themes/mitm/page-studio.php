@@ -5,8 +5,8 @@ Template Name: Studio Page
 get_header();
 ?>
 <div class="studio-page">
-	<div class="banner-img">
-		<figure>
+	<div class="banner-img ">
+		<figure class="studio-page-banner ">
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/studio-hero.jpg"  />
 		</figure>
 	</div>

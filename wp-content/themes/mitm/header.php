@@ -88,11 +88,28 @@
 							<div class="site-branding">
 								<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							</div>
-							<!-- mob-navigation -->
+							<!-- mob-section -->
+							<div class="mob-page-info">
+								<?php
+                                    if ( is_page_template( 'page-about.php' ) ) {
+                                        $current_page = 'about';
+                                    } else if ( is_page_template( 'page-studio.php' ) ) {
+                                        $current_page = 'studio';
+                                    } else if ( is_page_template( 'single.php' ) ) {
+                                        $current_page = 'about';
+                                    } else if ( is_page_template( 'index.php' ) ) {
+                                        $current_page = 'index';
+                                    }
+                                ?>
+                                <?php if ( isset( $current_page ) ) { ?>
+                                    <span class="current-page"><?php echo $current_page ?></span>
+                                <?php } ?>
+
+							</div>
 							<div class="mob-menu">
 								<a class="mobmenuicon" href="">&nbsp;</a>
 							</div>
-							<!-- mob-navigation -->
+							<!-- mob-section -->
 							<!-- site-navigation -->
 							<nav id="site-navigation" class="main-navigation" role="navigation">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

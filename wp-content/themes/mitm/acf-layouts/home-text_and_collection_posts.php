@@ -23,11 +23,12 @@
 		<?php foreach($_acf_data['collections'] as $post) : ?>
 		<?php setup_postdata($post); ?>
 		<article class="col-sm-4 col-md-4 col-lg-4 post_thumbnail">
-			<figure>
+			<a href="<?php the_permalink() ?>"><figure>
 				<span class="collection-number"><?php the_field( 'collection_post_number' )  ?></span>
 				<?php the_post_thumbnail() ?>
 			</figure>
-			<div class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
+			<div class="post-title"><?php the_title() ?></div>
+			</a>
 		</article>
 		<?php endforeach; ?>
 		

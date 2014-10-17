@@ -201,7 +201,8 @@
         }
         @media (max-width: $screen-phone) {
             display: block;
-            margin: 22px 63px 0 0;
+            margin: 22px 80px 0 0;
+
         }
     }
     .header-section {
@@ -218,13 +219,26 @@
                 font-size: 0;
             }
             @media (max-width: $screen-phone) {
-                margin: 10px 0 10px 73px;
+                margin:10px 0 10px 90px;
                 a {
                     @include bg-img(logo-s, png);
                     @include size(63px, 65px);
                 }
             }
         }
+        .mob-page-info {
+    border-bottom: 4px solid;
+    display: inline-block;
+    margin: 33px 16px 0;
+    text-transform: uppercase;
+    @extend %text-center;
+    @include font-shorthand(12px, 400, 14px);
+    @extend %Raleway;
+    .current-page {
+                display: block;
+                margin-bottom: 1px;
+            }
+}
         // Main Navigation
         .main-navigation {
             padding: 0;

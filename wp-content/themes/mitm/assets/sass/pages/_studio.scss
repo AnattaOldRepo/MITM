@@ -8,6 +8,9 @@
         @extend %heading-level-2;
         font-style: italic;
         margin: 35px 0 30px;
+        @media (max-width: $screen-phone) {
+            @include font-shorthand(29px, 700, 35px);
+        }
     }
     h4 {
         @extend %text-center;
@@ -28,10 +31,24 @@
         @extend %width-960;
         @extend %text-center;
         @extend %banner-img;
+        @media (max-width: $screen-phone) {
+            figure {
+                @include size(320px, 205px);
+                img {
+                    display: none;
+                }
+                &.studio-page-banner {
+                    @include bg-img-center(mob-studio-banner, jpg);
+                }
+            }
+        }
     }
     p {
-        margin: 35px 4px 30px;
+        margin: 35px 10px 30px;
         @extend %text-center;
+        @media (max-width: $screen-phone) {
+            @include font-shorthand(17px, normal, 31px);
+        }
     }
     .orange-patterns {
         color: $White;
@@ -40,12 +57,18 @@
         height: 100px;
         @extend %width-960;
         @include bg-img-center(orange-patterns, png);
-        
-         
         h2 {
             margin: 0;
             font-size: 28px;
             font-weight: bold;
+        }
+        @media (max-width: $screen-phone) {
+            padding-top: 20px;
+              margin: 25px auto;
+            h2 {
+                margin: 0 83px;
+                @include font-shorthand(23px, normal, 31px);
+            }
         }
     }
     .gray-patterns {
@@ -55,9 +78,16 @@
         height: 100px;
         @extend %width-960;
         @include bg-img-center(gray-patterns, png);
-         
         h2 {
             margin: 0;
+        }
+        @media (max-width: $screen-phone) {
+            padding-top: 20px;
+            margin-top: 20px;
+            h2 {
+                margin: 0 40px;
+                @include font-shorthand(23px, normal, 31px);
+            }
         }
     }
     .writer-section {
@@ -114,33 +144,82 @@
                 }
             }
         }
-        .mobile-tools {
-            border: 1px solid red;
-            .toolboox-title {
-                background-color: $BgColor3;
-                border: 1px solid $BdColor5;
-                color: $text-color3;
-                        text-decoration: none;
-                        padding: 5px;
-                        @extend %list-level-1;
-                        //@include box-shadow(0 2px 2px $BdColor5);
-
+    }
+    @media (max-width: $screen-phone) {
+        .writer-section {
+            figure {
+             margin: 30px 0 0;
+            img {
+                max-width: 100%;
+                height: auto;
             }
-            .toolboox-content {
-                display: none;
-                figure {
-                    margin: 0;
-                    .toolboox-caption{
-                        background-color: $BgColor;
-            color: $White;
-            text-align: center;
-             @extend %list-level-1;
-             padding: 18PX 0;
-                    }
+        }
+            p {
+                margin:15px;
+            }
+            h4 {margin-top: 25px;
+                
+                &.toolheading {
+                margin: 40px 0 15px;
+            }
+            }
+        }
+        .desktop-tools {
+            display: none;
+        }
+    }
+    .mobile-tools {
+        display: none;
+        border-top: 1px solid $BdColor5;
+        border-bottom: 1px solid $BdColor5;
+        .toolboox-title {
+            background-color: $BgColor3;
+            border-bottom: 1px solid $BdColor5;
+            color: $text-color3;
+            text-decoration: none;
+            padding: 15px;
+            cursor: pointer;
+            @extend %list-level-1;
+            @extend %text-center;
+        }
+        .woodworking-tools {
+            .toolboox-title {
+                border-top: 1px solid $BdColor5;
+                border-bottom: 0 none;
+            }
+        }
+        .toolboox-content {
+            display: none;
+            figure {
+                margin: 0;
+                .toolboox-caption {
+                    background-color: $BgColor;
+                    color: $White;
+                    cursor: pointer;
+                    text-align: center;
+                    padding: 18px 0;
+                    @extend %list-level-1;
+                    @include bg-img-only(close_s, png, no-repeat, 97%, center);
                 }
             }
-            .remove {
-                display: none;
+            p {
+                @extend %text-left;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        @media (max-width: $screen-phone) {
+            display: block;
+            h4 {
+                margin: 20px 20px 18px;
+            }
+            figure {
+                 
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                 
             }
         }
     }
@@ -188,42 +267,39 @@
             border: 1px solid red;
         }
     }
-    .bottom-content h4 {
-        margin: -19px 0 -9px;
+    .bottom-content {
+        h4 {
+            margin: -19px 0 -9px;
+        }
+        @media (max-width: $screen-phone) {
+            h4 {
+                margin: 25px 0 10px;
+            }
+            p {
+                margin: 0 15px;
+            }
+            figure {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: $screen-phone) {
+        margin-bottom: 0;
     }
 }
 
 .page-template-page-studio-php {
     .subscribe-form-wrapper {
-        //margin:40px auto 0;
-        //@include size(960px, 136px);
+        
         @include bg-img-center(about-footer-bg, jpg);
+        @media (max-width: $screen-phone) {
+
+        margin: 25px auto 0;
+        @include size(320px, 165px);
+            @include bg-img-center(mob-studio-footer, jpg);
+    }
     }
 }
-
-/*.subscribe-form {
-	padding-top: 46px;
-    input {
-    	text-transform: uppercase;
-    	text-align: center;
-    	color: $text-color4;
-    	padding: 0 10px;
-    	margin-left: 54px;
-    	@extend %Raleway;
-    	border:1px solid $BdColor6;
-    	margin-right: 10px; 
-        @include size(370px, 55px);
-    }
-    button {
-    	text-transform: uppercase;
-    	text-align: center;
-    	color: $White;
-    	border: 0 none;
-    	font-size: 16px;
-    	@extend %Raleway;
-    	font-weight: 500px;
-    	@include bg-img-center(button-bg, jpg);
-    	@include size(184px, 55px);
-    }
-
-}*/
