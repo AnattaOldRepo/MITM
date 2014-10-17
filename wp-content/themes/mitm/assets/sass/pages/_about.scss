@@ -78,8 +78,14 @@
             }
 
         }
+        .mob_view {
+            display: none;
+        }
         @media (max-width: $screen-phone) { 
             margin-bottom: 0;
+            .mob_view {
+            display: block;
+        }
         figure {
             
                 @include size(178px, 192px);
