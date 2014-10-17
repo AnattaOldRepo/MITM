@@ -31,16 +31,14 @@ get_header(); ?>
 					</div>
 				</div>
 					<?php foreach ( get_field( 'related_collections' ) as $collection ) : ?>
-						<?php setup_postdata( $collection ); ?>
 						<article class="col-sm-4 col-md-4 col-lg-4 post_thumbnail">
 							<figure>
-								<span class="collection-number"><?php the_field( 'collection_post_number' )  ?></span>
-								<?php the_post_thumbnail() ?>
+								<span class="collection-number"><?php echo get_field( 'collection_post_number', $collection->ID );  ?></span>
+								<?php echo get_the_post_thumbnail( $collection->ID ) ?>
 							</figure>
-							<div class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></div>
+							<div class="post-title"><a href="<?php echo get_the_permalink( $collection->ID ) ?>"><?php echo get_the_title( $collection->ID ) ?></a></div>
 						</article>
 					<?php endforeach; ?>
-					<?php wp_reset_postdata(); ?>
 			</section>
 		<?php } ?>
 	</div>
