@@ -14,7 +14,8 @@
 			<div class="page-section ">
 				<form class="subscribe-form" name="newlsetter-form">
 					<input type="text" name="email" placeholder="YOUR EMAIL ADDRESS HERE" >
-					<button type="submit">Know More</button>
+					<!--<button type="submit">Know More</button>-->
+					<button type="submit">SUBSCRIBE</button>
 				</form>
 				<div class="success message" style="display:none">Thank for subscribing us!</div>
 			</div>

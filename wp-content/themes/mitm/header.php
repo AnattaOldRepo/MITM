@@ -89,6 +89,9 @@
 								<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 							</div>
 							<!-- mob-section -->
+							<div class="mob-menu">
+								<a class="mobmenuicon" href="">&nbsp;</a>
+							</div>
 							<div class="mob-page-info">
 								<?php
                                     if ( is_page_template( 'page-about.php' ) ) {
@@ -106,9 +109,7 @@
                                 <?php } ?>
 
 							</div>
-							<div class="mob-menu">
-								<a class="mobmenuicon" href="">&nbsp;</a>
-							</div>
+							
 							<!-- mob-section -->
 							<!-- site-navigation -->
 							<nav id="site-navigation" class="main-navigation" role="navigation">

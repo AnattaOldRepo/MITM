@@ -4,7 +4,7 @@
 
 .about-page {
     margin-bottom: 65px;
-    @media (max-width: $screen-phone) { 
+    @media (max-width: $screen-xs-max) { 
         margin-bottom: 0;}
     .page-section {
         padding-top: 6px;
@@ -14,7 +14,7 @@
         @extend %heading-level-2;
         font-style: italic;
         margin-top: 35px;
-        @media (max-width: $screen-phone) { 
+        @media (max-width: $screen-xs-max) { 
             margin: 15px 55px;
              @include font-shorthand(29px, normal, 35px);
         }
@@ -22,7 +22,7 @@
     p {
         margin: 29px 5px 38px;
         text-align: center;
-        @media (max-width: $screen-phone) { 
+        @media (max-width: $screen-xs-max) { 
             margin: 20px 5px 25px;
                 padding: 0 12px;
                 text-align: center;
@@ -30,17 +30,25 @@
             }
     }
     .banner-img {
-        @include size(100%, auto);
+        margin: auto;
+        //@extend %width-960;
         @extend %text-center;
         @extend %banner-img;
-        @media (max-width: $screen-phone) { 
+        figure {
+            @include size(auto, 205px);
+            //@include bg-img-center(mob-studio-banner, jpg);
+            img {
+                display: none;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
             figure {
-                @include size(320px, 205px);
+               background-position:center top;
                 img {
                     display: none;
                 }
-                &.about-page-banner {
-                    @include bg-img-center(mob-about-banner, jpg);
+                &.studio-page-banner {
+                    //@include bg-img-center(mob-studio-banner, jpg);
                 }
             }
         }
@@ -49,7 +57,7 @@
         @extend %text-center;
         @extend %pharagraph-level-1;
         margin: 35px 0 20px 0;
-        @media (max-width: $screen-phone) { 
+        @media (max-width: $screen-xs-max) { 
             margin: 24px 0 14px;;
              
             &.desktop_view {
@@ -70,7 +78,7 @@
         p {
             margin: 0;
             @extend %text-left;
-            @media (max-width: $screen-phone) { 
+            @media (max-width: $screen-xs-max) { 
                 text-align: center;
                 padding: 0 15px;
                 margin-bottom:0;
@@ -81,7 +89,7 @@
         .mob_view {
             display: none;
         }
-        @media (max-width: $screen-phone) { 
+        @media (max-width: $screen-xs-max) { 
             margin-bottom: 0;
             .mob_view {
             display: block;
@@ -106,13 +114,13 @@
             @extend %text-center;
             @extend %heading-level-2;
             font-style: italic;
-             @media (max-width: $screen-phone) {  
+             @media (max-width: $screen-xs-max) {  
                   margin-top: 8px;
                   padding: 0 10px;
               @include font-shorthand(23px, normal, 36px);
         }
         }
-        @media (max-width: $screen-phone) {  
+        @media (max-width: $screen-xs-max) {  
              margin: 32px 0 20px;
             figure {
                 img {

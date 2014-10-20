@@ -28,7 +28,7 @@
             }
         }
         figure {
-            background: url(../images/net_img.png) repeat-x left top;
+            //background: url(../images/net_img.png) repeat-x left top;
             img {
                 position: relative;
                 z-index: -1;
@@ -104,6 +104,9 @@
                 }
                 .post-title {
                     color: $White;
+                    //@include bg-img-only(close_s, png, no-repeat, 97%, center);
+                    @include bg-img(thumb-title-bg,png repeat left top);
+
                     background: rgba(244, 120, 62, 0.5);
                     bottom: 13px;
                     font-size: 26px;

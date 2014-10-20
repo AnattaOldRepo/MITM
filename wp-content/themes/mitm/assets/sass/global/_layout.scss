@@ -27,6 +27,9 @@ body {
 
 * {
     @include box-sizing(border-box);
+     -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
 }
 
 #content {}
@@ -35,14 +38,14 @@ body {
     width: 670px;
     margin: 0 auto;
     @media (max-width: $screen-xs-max) {
-        width: 320px;
+        width: auto;
     }
 }
 
 .subscribe-form-wrapper {
     margin: 40px auto 0;
     height: 160px;
-    @extend %width-960;
+    width: auto;
     .subscribe-form {
         padding-top: 46px;
         input {
@@ -84,7 +87,7 @@ body {
             button {
                 margin: 0 auto !important;
                 display: block;
-                //background-color: $BgColor;
+                background-color: $BgColor5;
                 @include bg-img-center(button-bg-s, jpg);
                  
                 @include font-shorthand(16px, 500px, normal);

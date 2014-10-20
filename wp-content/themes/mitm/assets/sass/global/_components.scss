@@ -102,10 +102,13 @@ td {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
-
-.input-text::-webkit-.input-placeholder {
+::-webkit-input-placeholder {
+   color: $text-color2;
+}
+.input-text:-webkit-.input-placeholder {
     color: $text-color2;
     font-style: italic;
+    border: 1px solid red !important;
 }
 
 .input-text:-moz-placeholder {
@@ -183,11 +186,16 @@ p {
     @extend %pharagraph-level-1;
 }
 %banner-img {
-    figure {
-            background: url(../images/net_img.png) repeat-x left top;
-            img {
-            position: relative;
+     
+    background: url(../images/net_img.png) repeat-x left top;
+    figure {position: relative;
             z-index: -1;
+            background-position: center top;
+            background-repeat: no-repeat;
+            
+            img {
+            //position: relative;
+            //z-index: -1;
             margin: auto;
             @media (max-width: $screen-sm-min) { @include size(100%, auto);}
             }

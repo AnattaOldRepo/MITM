@@ -8,7 +8,8 @@
         @extend %heading-level-2;
         font-style: italic;
         margin: 35px 0 30px;
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
+            margin: 24px 0 -10px;
             @include font-shorthand(29px, 700, 35px);
         }
     }
@@ -28,17 +29,24 @@
     }
     .banner-img {
         margin: auto;
-        @extend %width-960;
+        //@extend %width-960;
         @extend %text-center;
         @extend %banner-img;
-        @media (max-width: $screen-phone) {
+        figure {
+            @include size(auto, 205px);
+            //@include bg-img-center(mob-studio-banner, jpg);
+            img {
+                display: none;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
             figure {
-                @include size(320px, 205px);
+               background-position: 90% top;
                 img {
                     display: none;
                 }
                 &.studio-page-banner {
-                    @include bg-img-center(mob-studio-banner, jpg);
+                    //@include bg-img-center(mob-studio-banner, jpg);
                 }
             }
         }
@@ -46,7 +54,7 @@
     p {
         margin: 35px 10px 30px;
         @extend %text-center;
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             @include font-shorthand(17px, normal, 31px);
         }
     }
@@ -62,7 +70,7 @@
             font-size: 28px;
             font-weight: bold;
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             padding-top: 20px;
               margin: 25px auto;
             h2 {
@@ -81,7 +89,7 @@
         h2 {
             margin: 0;
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             padding-top: 20px;
             margin-top: 20px;
             h2 {
@@ -145,7 +153,7 @@
             }
         }
     }
-    @media (max-width: $screen-phone) {
+    @media (max-width: $screen-xs-max) {
         .writer-section {
             figure {
              margin: 30px 0 0;
@@ -208,7 +216,7 @@
                 padding-right: 15px;
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             display: block;
             h4 {
                 margin: 20px 20px 18px;
@@ -271,7 +279,7 @@
         h4 {
             margin: -19px 0 -9px;
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             h4 {
                 margin: 25px 0 10px;
             }
@@ -286,7 +294,7 @@
             }
         }
     }
-    @media (max-width: $screen-phone) {
+    @media (max-width: $screen-xs-max) {
         margin-bottom: 0;
     }
 }
@@ -294,12 +302,12 @@
 .page-template-page-studio-php {
     .subscribe-form-wrapper {
         
-        @include bg-img-center(about-footer-bg, jpg);
-        @media (max-width: $screen-phone) {
+        @include bg-img(about-footer-bg, jpg, repeat);
+        @media (max-width: $screen-xs-max) {
 
         margin: 25px auto 0;
-        @include size(320px, 165px);
-            @include bg-img-center(mob-studio-footer, jpg);
+        //@include size(320px, 165px);
+            //@include bg-img-center(mob-studio-footer, jpg);
     }
     }
 }

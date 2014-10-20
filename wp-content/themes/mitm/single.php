@@ -6,8 +6,8 @@
 */
 get_header(); ?>
 <div id="primary" class="blog-page blog-details"><div class="banner-img">
-	<figure>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg"  />
+	<figure style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg)">
+		<!--<img src="<?php //echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg"  />-->
 	</figure>
 </div>
 <div id="main" class="container" role="main">

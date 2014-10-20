@@ -29,18 +29,15 @@
         @include bg-img-center(footer-bg, png);
     }
     @media (max-width: $screen-xs-max) {
-        padding: 20px 0;
+        padding: 25px 0;
         text-align: center;
         @include size(auto, auto);
         @include bg-img-center(foter-bg-s, jpg);
         background-repeat: repeat-y;
         .copy-right {
             float: none;
-            line-height: 28px;
-            margin: 20px 0 0;
-           @media (max-width: $screen-phone) {
+            line-height: 28px; 
                  margin: 50px 0 5px;
-            }
         }
         .social-links {
             margin: 0 auto;

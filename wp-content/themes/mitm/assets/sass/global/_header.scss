@@ -21,7 +21,7 @@
             @include bg-img-center(contact-ng, png);
             background-size: 100%;
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             @include size(auto, auto);
             background-color: $Gray;
             //@include bg-img-center(contact-ng, png);
@@ -34,9 +34,8 @@
                 margin-left: 28px;
                 @extend %pull-left;
                 p {
+                    @include font-shorthand(11px, 400px, 19px);
                     @extend %merriweather;
-                    font-size: 13px;
-                    line-height: 1.7em;
                     padding-bottom: 18px;
                     span, a {
                         color: $Orange;
@@ -44,7 +43,7 @@
                         font-style: italic;
                     }
                 }
-                @media (max-width: $screen-phone) {
+                @media (max-width: $screen-xs-max) {
                     margin-left: 0px;
                     width: 200px;
                 }
@@ -77,6 +76,8 @@
                     .input-text {
                         @extend %input-text;
                         margin-bottom: 15px;
+                        -webkit-appearance: none;
+                        -webkit-border-radius: 0;
                         &:focus {
                             -webkit-box-shadow: 0px 0px 2px white;
                             -moz-box-shadow: 0px 0px 2px white;
@@ -86,10 +87,14 @@
                     }
                     input {
                         @include size(100%, 38px);
+                        -webkit-appearance: none;
+                        -webkit-border-radius: 0;
                     }
                     textarea {
                         padding: 10px;
                         @include size(100%, 78px);
+                        -webkit-appearance: none;
+                        -webkit-border-radius: 0;
                     }
                     span {
                         color: $Orange;
@@ -103,6 +108,21 @@
                     @include size(100%, auto);
                     cursor: pointer;
                 }
+                @media (max-width: $screen-xs-max) {
+                    .title-section {
+                        @include font-shorthand(13px, 400px, 21px);
+                    }
+                    .form {
+                        @media (max-width: $screen-xs-max) {
+                            margin-left: 0px;
+                            width: 200px;
+                            .input-text {
+                                //border: 1px solid red !important;
+                                @include font-shorthand(13px, 400px, 21px);
+                            }
+                        }
+                    }
+                }
             }
             .close-box {
                 position: absolute;
@@ -113,7 +133,7 @@
                 @include bg-img-center(orange_close, png);
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             @include size(auto, auto);
             background: $Gray;
             padding: 30px 0;
@@ -182,7 +202,7 @@
                 }
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             display: block;
         }
     }
@@ -199,7 +219,7 @@
                 @include bg-img(menu-icon_o, png);
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             display: block;
             margin: 22px 80px 0 0;
         }
@@ -208,6 +228,7 @@
         padding: 0;
         .logo {
             margin: 14px 0 0 56px;
+            //@include size(78px, auto);
             @extend %pull-left;
             a {
                 @include size(78px, 83px);
@@ -217,8 +238,9 @@
                 text-indent: 99999px;
                 font-size: 0;
             }
-            @media (max-width: $screen-phone) {
+            @media (max-width: $screen-xs-max) {
                 margin: 10px 0 10px 90px;
+                //width: 10%;
                 a {
                     @include bg-img(logo-s, png);
                     @include size(63px, 65px);
@@ -226,19 +248,20 @@
             }
         }
         .mob-page-info {
-            border-bottom: 4px solid;
-            display:none;
-            margin: 33px 16px 0;
+            width: auto;
+            display: none;
+            margin: 33px auto 0;
             text-transform: uppercase;
             @extend %text-center;
             @include font-shorthand(12px, 400, 14px);
             @extend %Raleway;
             .current-page {
-                display: block;
+                //display: block;
+                border-bottom: 4px solid;
                 margin-bottom: 1px;
             }
-            @media (max-width: $screen-phone) {
-                display: inline-block;
+            @media (max-width: $screen-xs-max) {
+                display: block;
             }
         }
         // Main Navigation
@@ -280,7 +303,7 @@
                     }
                 }
             }
-            @media (max-width: $screen-phone) {
+            @media (max-width: $screen-xs-max) {
                 display: none;
             }
         }

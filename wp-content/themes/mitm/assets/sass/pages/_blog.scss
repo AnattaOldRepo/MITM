@@ -20,9 +20,27 @@
     }
     .banner-img {
         margin: auto;
-        @extend %width-960;
+        //@extend %width-960;
         @extend %text-center;
         @extend %banner-img;
+        figure {
+            @include size(auto, 205px);
+            //@include bg-img-center(mob-studio-banner, jpg);
+            img {
+                display: none;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            figure {
+               background-position:center top;
+                img {
+                    display: none;
+                }
+                &.studio-page-banner {
+                    //@include bg-img-center(mob-studio-banner, jpg);
+                }
+            }
+        }
     }
     .post-section {
         position: relative;
@@ -41,6 +59,7 @@
             margin: 0 60px 20px 0;
             min-height: 90px;
             @extend %heading-level-2;
+            font-weight: 700;
         }
         .post-image {
             margin-bottom: 38PX;
@@ -53,7 +72,7 @@
                 display: block;
                 color: $White;
                 text-transform: uppercase;
-                padding-top: 15px;
+                padding-top: 11px;
                 @extend %pharagraph-level-7;
                 @extend %text-center;
                 @include bg-img-only(read-more-bg, png);
@@ -91,7 +110,7 @@
                 top: 8px;
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             //border: 1px solid red;
             //@extend %pull-none;
             margin-top: 20px;
@@ -143,10 +162,11 @@
         }
     }
     .blog-paging {
-        margin: 30px auto 0;
+        margin: 95px auto 0;
         background: $BgColor3;
         padding: 30px 0 40px 0;
-        @extend %width-960;
+        width: auto;
+        //@extend %width-960;
         @extend %clear-both;
         .wp-paginate {
             display: table;
@@ -165,16 +185,17 @@
                 }
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             border-top: 1px solid $BdColor;
             padding-top: 20px;
+            margin: 30px auto 0;
         }
     }
     .post-pagination {
-        margin: 40px auto 0;
+        margin: 95px auto 0;
         background: $BgColor3;
         padding: 30px 0;
-        @extend %width-960;
+        width: auto;
         @extend %clear-both;
         a {
             text-transform: uppercase;
@@ -185,15 +206,15 @@
             @extend %MyriadPro;
         }
         .right a {
-            padding-right: 24px;
+            padding-right: 28px;
             @extend %text-right;
             @include bg-img(next-arrow, png, no-repeat, right, center);
         }
         .left a {
-            padding-left: 24px;
+            padding-left: 28px;
             @include bg-img-only(prev-arrow, png);
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             margin: 20px auto 0;
             padding: 20px 0;
             a {
@@ -211,7 +232,7 @@
             }
         }
     }
-    @media (max-width: $screen-phone) {
+    @media (max-width: $screen-xs-max) {
         #main {
             padding: 0;
         }
@@ -222,7 +243,7 @@
                 text-align: center;
             }
         }
-        @media (max-width: $screen-phone) {
+        @media (max-width: $screen-xs-max) {
             .post-section {
                 .social-links {
                     float: none;
@@ -242,6 +263,6 @@
     .subscribe-form-wrapper {
         margin-top: 0;
         background-color: red;
-        @include bg-img-center(subscribe-orange-bg, jpg);
+        @include bg-img(subscribe-orange-bg, jpg, repeat, left, top);
     }
 }
