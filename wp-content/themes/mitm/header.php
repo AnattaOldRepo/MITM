@@ -98,10 +98,10 @@
                                         $current_page = 'about';
                                     } else if ( is_page_template( 'page-studio.php' ) ) {
                                         $current_page = 'studio';
-                                    } else if ( is_page_template( 'single.php' ) ) {
-                                        $current_page = 'about';
-                                    } else if ( is_page_template( 'index.php' ) ) {
-                                        $current_page = 'index';
+                                    } else if ( is_singular( 'post' ) ) {
+                                        $current_page = 'blog';
+                                    } else if ( get_queried_object()->post_name == 'blog' ) {
+                                        $current_page = 'blog';
                                     }
                                 ?>
                                 <?php if ( isset( $current_page ) ) { ?>
