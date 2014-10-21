@@ -7,7 +7,7 @@ get_header();
 ?>
 <div class="about-page">
 	<div class="banner-img">
-		<figure class="about-page-banner" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/about-hero.jpg)">>
+		<figure class="about-page-banner" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/about-hero.jpg)">
 
 			<!--<img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-hero.jpg"  />-->
 		</figure>
