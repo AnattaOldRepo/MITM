@@ -323,6 +323,7 @@
         margin: 200px auto 0 auto;
         @media (max-width: $screen-xs-max) {
             @include size(162px, 177px);
+            margin-top: 50px;
         }
     }
     #go_btn {
