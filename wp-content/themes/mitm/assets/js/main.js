@@ -84,7 +84,23 @@
         });*/
         /*-----End Home page ----------*/
 
+        $('.navigation nav a').eq(3).click(function () {
+            $('html, body').animate({
+                scrollTop: $('.work-with-us').offset().top
+            }, 1000);
+            return false;
+        });
+
+        // Home screen height and down arrow make scrollable
         $("#welcome-screen").height( $( window ).height());
+
+        $('#go_btn').click(function () {
+            $('html, body').animate({
+                scrollTop: $('#page').offset().top
+            }, 1000);
+            return false;
+        });
+
 
         /*-----------Studio Page slide up/down-------*/
         $('.article').hide();
