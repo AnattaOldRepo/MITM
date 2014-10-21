@@ -1,9 +1,9 @@
 <?php $_acf_data = $field; ?>
-<ul class="bxslider">
+<div id="owl-carousel" class="owl-carousel owl-theme">
 	<?php if ( is_array( $_acf_data['slides'] ) ) { ?>
 		<?php foreach ( $_acf_data['slides'] as $slides ) { ?>
 			<?php if ( isset( $slides['image'] )  && ! empty( $slides['image'] ) ) { ?>
-				<li class="image">
+				<div class="item">
 					
 					<?php if ( isset( $slides['title'] )  && ! empty( $slides['title'] ) ) { ?>
 						<div class="title">
@@ -13,8 +13,8 @@
 					<figure>
 						<img src="<?php echo $slides['image'] ?>" alt="" />
 					</figure>
-				</li>
+				</div>
 			<?php } ?>
 		<?php } ?>
 	<?php } ?>
-</ul>
+</div>

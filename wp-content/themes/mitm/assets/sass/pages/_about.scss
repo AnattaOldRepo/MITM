@@ -14,9 +14,10 @@
         @extend %heading-level-2;
         font-style: italic;
         margin-top: 35px;
+        font-weight: 700;
         @media (max-width: $screen-xs-max) { 
             margin: 15px 55px;
-             @include font-shorthand(29px, normal, 35px);
+             @include font-shorthand(29px, 700, 35px);
         }
     }
     p {

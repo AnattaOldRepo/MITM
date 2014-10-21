@@ -117,6 +117,11 @@
     -moz-box-shadow: $shadow;
     box-shadow: $shadow;
 }
+@mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+    text-shadow: $shadow;
+}
 
 // Input placeholder
 @mixin input-placeholder {

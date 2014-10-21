@@ -27,9 +27,9 @@ body {
 
 * {
     @include box-sizing(border-box);
-     -webkit-appearance: none;
-   -moz-appearance:    none;
-   appearance:         none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 #content {}
@@ -48,18 +48,34 @@ body {
     width: auto;
     .subscribe-form {
         padding-top: 46px;
+        input:-webkit-placeholder {
+            color: $text-color4;
+            border:1px solid red !important;
+        }
+        input::-moz-placeholder {
+            color: $text-color4;
+        }
+        input::-moz-placeholder {
+            color: $text-color4;
+        }
+        input::-ms-input-placeholder {
+            color: $text-color4;
+        }
         input {
             text-transform: uppercase;
             text-align: center;
-            color: $text-color4;
+            color: $text-color2;
             padding: 0 10px;
             margin-left: 54px;
             border: 1px solid $BdColor6;
             margin-right: 10px;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
             @include font-shorthand(16px, 300px, normal);
             @include size(370px, 55px);
             @extend %Raleway;
         }
+
         button {
             text-transform: uppercase;
             color: $White;
@@ -81,7 +97,7 @@ body {
                 input {
                     margin: 0 auto 10px !important;
                     @include size(100%, 45px);
-                      display: block;
+                    display: block;
                 }
             }
             button {
@@ -89,7 +105,6 @@ body {
                 display: block;
                 background-color: $BgColor5;
                 @include bg-img-center(button-bg-s, jpg);
-                 
                 @include font-shorthand(16px, 500px, normal);
                 @include size(100%, 45px);
             }

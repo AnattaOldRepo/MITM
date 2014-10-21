@@ -1,0 +1,98 @@
+//
+// Layout
+// --------------------------------------------------
+
+body {
+    @extend %merriweather;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    font-size: $font-size-base;
+    color: $text-color;
+    //&.ugly-os{
+    //  -webkit-text-stroke: 0.3px;
+    // }
+}
+
+#page {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: $site-width;
+    @extend %block-center;
+    .wp-caption {
+        text-align: center;
+    }
+}
+
+* {
+    @include box-sizing(border-box);
+     -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+
+#content {}
+
+.page-section {
+    width: 670px;
+    margin: 0 auto;
+    @media (max-width: $screen-xs-max) {
+        width: auto;
+    }
+}
+
+.subscribe-form-wrapper {
+    margin: 40px auto 0;
+    height: 160px;
+    width: auto;
+    .subscribe-form {
+        padding-top: 46px;
+        input {
+            text-transform: uppercase;
+            text-align: center;
+            color: $text-color4;
+            padding: 0 10px;
+            margin-left: 54px;
+            border: 1px solid $BdColor6;
+            margin-right: 10px;
+            @include font-shorthand(16px, 300px, normal);
+            @include size(370px, 55px);
+            @extend %Raleway;
+        }
+        button {
+            text-transform: uppercase;
+            color: $White;
+            border: 0 none;
+            cursor: pointer;
+            @extend %text-center;
+            @include font-shorthand(16px, 600px, normal);
+            @include bg-img-center(button-bg, jpg);
+            @include size(184px, 55px);
+            @extend %Raleway;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        .page-section {
+            padding: 0 15px;
+            width: auto;
+            .subscribe-form {
+                padding: 20px 0;
+                input {
+                    margin: 0 auto 10px !important;
+                    @include size(100%, 45px);
+                      display: block;
+                }
+            }
+            button {
+                margin: 0 auto !important;
+                display: block;
+                background-color: $BgColor5;
+                @include bg-img-center(button-bg-s, jpg);
+                 
+                @include font-shorthand(16px, 500px, normal);
+                @include size(100%, 45px);
+            }
+        }
+    }
+}

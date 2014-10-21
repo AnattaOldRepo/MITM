@@ -253,7 +253,7 @@
             margin: 33px auto 0;
             text-transform: uppercase;
             @extend %text-center;
-            @include font-shorthand(12px, 400, 14px);
+            @include font-shorthand(12px, 500, 14px);
             @extend %Raleway;
             .current-page {
                 //display: block;

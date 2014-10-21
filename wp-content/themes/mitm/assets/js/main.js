@@ -48,24 +48,41 @@
                 }, "json");
             return false;
         });
-
+        /*----- Home page js----------*/
         // slider on home page
-        //$('.bxslider').bxSlider();
-        $('.bxslider').bxSlider({
-            auto: true,
-            autoControls: true,
-            default: false,
-            default: false
-        });
+        //----bxslider-----------
+            /*$('.bxslider').bxSlider();
+                $('.bxslider').bxSlider({
+                    auto: true,
+                    autoControls: true,
+                    default: false,
+                    default: false
+             });*/
+        //----Owl-Carousel-----------//
+            $("#owl-carousel").owlCarousel({
+                  navigation : true, // Show next and prev buttons
+                  slideSpeed : 300,
+                  paginationSpeed : 400,
+                  singleItem:true,
+                  autoPlay:true
+                  // "singleItem:true" is a shortcut for:
+                  // items : 1,
+                  // itemsDesktop : false,
+                  // itemsDesktopSmall : false,
+                  // itemsTablet: false,
+                  // itemsMobile : false
+              });
+        /*----- End Owl Carousel ----------*/
 
         // show hide home page welcome screen
-        $('.page-template-page-homepage-php #page').hide();
+        /*$('.page-template-page-homepage-php #page').hide();
         $("#go_btn").on('click', function() {
         	//$('#page').attr('style', 'display: none !important');
             $('.page-template-page-homepage-php #page').show();
             $("#welcome-screen").slideUp("slow");
             return false;
-        });
+        });*/
+        /*-----End Home page ----------*/
         /*-----------Studio Page slide up/down-------*/
         $('.article').hide();
         $('.tool-index h4').on('click', function() {
@@ -96,6 +113,12 @@
         });
 
         /*-----------End Mobile toll-box up/down-------*/
+        /*-----------MyToolBox-------------------------*/
+          $(".tools-list a").on('click', function(){
+                $(".tools-list a").removeClass('active');
+                $(this).addClass('active');
+        });
+     /*-----------MyToolBox-------------------------*/
 
         
 	});

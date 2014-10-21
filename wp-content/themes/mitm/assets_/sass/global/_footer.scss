@@ -1,0 +1,47 @@
+//
+// Header
+// --------------------------------------------------
+
+.site-footer {
+    background-color: $BgColor;
+    color: $White;
+    height: 92px;
+    padding: 20px;
+    width: 100%;
+    @extend %pharagraph-level-7;
+    .copy-right {
+        font-size: 16px;
+        margin: 12px 0 0 19px;
+        @extend %pharagraph-level-3;
+        @extend %pull-left;
+    }
+    .social-links {
+        margin: -3px 5px 0 0;
+        @extend %pull-right;
+        a {
+            @include border_radius(2px);
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        width: 100%;
+        //height: 50px;
+        padding: 20px;
+        @include bg-img-center(footer-bg, png);
+    }
+    @media (max-width: $screen-xs-max) {
+        padding: 25px 0;
+        text-align: center;
+        @include size(auto, auto);
+        @include bg-img-center(foter-bg-s, jpg);
+        background-repeat: repeat-y;
+        .copy-right {
+            float: none;
+            line-height: 28px; 
+                 margin: 50px 0 5px;
+        }
+        .social-links {
+            margin: 0 auto;
+            float: none;
+        }
+    }
+}
