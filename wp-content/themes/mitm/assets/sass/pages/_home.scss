@@ -321,6 +321,9 @@
         @include bg-img-center(logo_l, png);
         background-size: 100%;
         margin: 200px auto 0 auto;
+        @media (max-width: $screen-xs-max) {
+            @include size(162px, 177px);
+        }
     }
     #go_btn {
         display: block;
