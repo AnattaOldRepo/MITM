@@ -59,13 +59,9 @@
         });
 
         // show hide home page welcome screen
-        $('.page-template-page-homepage-php #page').hide();
-        $("#go_btn").on('click', function() {
-        	//$('#page').attr('style', 'display: none !important');
-            $('.page-template-page-homepage-php #page').show();
-            $("#welcome-screen").slideUp("slow");
-            return false;
-        });
+
+        $("#welcome-screen").height( $(window.height() + 'px' ))
+
         /*-----------Studio Page slide up/down-------*/
         $('.article').hide();
         $('.tool-index h4').on('click', function() {
