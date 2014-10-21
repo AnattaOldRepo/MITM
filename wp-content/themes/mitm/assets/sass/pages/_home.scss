@@ -6,6 +6,8 @@
         overflow: hidden;
     }
     .owl-carousel {
+        max-width: 750px;
+        margin: 0px auto;
         .title {
             color: $White;
             background-color: $Gray;
@@ -225,7 +227,7 @@
         margin: 0 0 25px;
         .section-title {
             padding: 45px 90px;
-            @include font-shorthand(43px, 700, 52px);
+            @include font-shorthand(43px, normal, 52px);
             @extend %text-center;
             @extend %Lobster;
             @media (max-width: $screen-xs-max) {
@@ -309,45 +311,25 @@
 }
 
 #welcome-screen {
-    padding-top: 127px;
-    background-size: cover;
     @include size(100%, 769px);
-    @include bg-img-center(welcome_l, jpg);
+    @include bg-img-center(home-hero, jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
     .logo {
-        font-size: 0;
-        padding-top: 145px;
+        @include size(262px, 277px);
         @include bg-img-center(logo_l, png);
-        @include size(100%, 258px);
+        background-size: 100%;
+        margin: 200px auto 0 auto;
     }
     #go_btn {
-        margin: 158px auto 0;
         display: block;
-        font-size: 0;
         @include bg-img-center(welcome_arrow, png);
         @include size(74px, 87px);
-    }
-    @media (max-width: $screen-xs-max) {
-        padding-top: 58px;
-        position: relative;
-        //@include size(100%, 1024px);
-        .logo {
-            @include bg-img-center(mob-welcome-logo, png);
-            @include size(151, 157px);
-        }
-        #go_btn {
-            position: absolute;
-            //border:1px solid red;
-            margin: 90px 0 0 -25px;
-            bottom: 10%;
-            left: 50%;
-            @include bg-img-center(welcome_arrow_s, png);
-            @include size(51px, 59px);
-        }
-    }
-    @media (max-width: $screen-xs) {
-        @include size(100%, 480px);
-        #go_btn {
-            //margin: 120px auto 0;
-        }
+        position: absolute;
+        left: 50%;
+        bottom: 100px;
+        margin-left: -43px;
+        text-indent: -99999px;
     }
 }

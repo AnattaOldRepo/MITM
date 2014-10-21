@@ -83,6 +83,9 @@
             return false;
         });*/
         /*-----End Home page ----------*/
+
+        $("#welcome-screen").height( $( window ).height());
+
         /*-----------Studio Page slide up/down-------*/
         $('.article').hide();
         $('.tool-index h4').on('click', function() {
