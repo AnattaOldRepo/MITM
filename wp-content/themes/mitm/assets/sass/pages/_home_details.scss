@@ -1,0 +1,186 @@
+//
+// Home page details
+// --------------------------------------------------
+.home-detail { 
+    padding-top: 43px;
+    @extend %banner-img;
+    .post-detail {
+        margin: 0 27px 30px;
+        img {
+            //@include size(100%, auto);
+            max-width: 100%;
+            margin-bottom: 10px;
+            //margin-right: 10px;
+            &.alignright {
+                @extend %pull-right;
+            }
+        }
+        p {
+            margin: 0 0 24px;
+            @include font-shorthand(21px, 400, 37px);
+            &:nth-last-of-type(1) {
+            	 @extend %text-center;
+            	padding-top: 20px;
+                border-top: 1px solid $BdColor;
+            }
+
+        }
+        @media (max-width: $screen-xs-max) {
+            p {
+                margin: 0 0 20px;
+                @include font-shorthand(17px, 400, 31px);
+            }
+        }
+    }
+    .post-pagination {
+        margin: 0 27px 7px;
+		padding: 20px 0 10px;
+        width: auto;
+        border-bottom: 1px solid $BdColor;
+        @extend %clear-both;
+        a {
+            text-transform: uppercase;
+            color: $Gray;
+            display: block;
+            @include font-shorthand(17px, 400, 20px);
+            @include size(100px, 40px);
+            @extend %MyriadPro;
+        }
+        .left, .right {
+        	margin-top: 48px;
+        }
+        .right a {
+            padding-right: 28px;
+            @extend %text-right;
+            @include bg-img(next-arrow, png, no-repeat, right, center);
+        }
+        .left a {
+            padding-left: 28px;
+            @include bg-img-only(prev-arrow, png);
+        }
+        .post-title {
+            font-style: italic;
+            margin: 0 auto 0;
+            width: 70%;
+            @extend %text-center;
+            @extend %Lobstertwo;
+            @include font-shorthand(46px, 400, 54px);
+            span {
+                display: block;
+                @extend %text-center;
+                &.post-no {
+                	@include font-shorthand(33px, 400, 54px);
+                }
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            margin: 20px auto 7px;
+            padding: 20px 0 10px;
+            a {
+                letter-spacing: 0.4px;
+                @include size(50px, 28px);
+                font-size: 0;
+            }
+            .right a {
+                padding-right: 24px;
+                @include bg-img(next-arrow_s, png, no-repeat, right, center);
+            }
+            .left a {
+                padding-left: 24px;
+                @include bg-img-only(prev-arrow_s, png);
+            }
+            .post-title {
+                @include font-shorthand(29px, 400, 35px);
+                span {
+                 
+                &.post-no {
+                	@include font-shorthand(24px, 400, 35px);
+                }
+            }
+            }
+        }
+    }
+    .collection-post {
+        margin: 30px 27px 30px;
+        .gallery-title {
+            font-style: italic;
+            margin: 20px 0 19px;
+            border-bottom: 1px solid $BdColor;
+            padding-bottom: 13px;
+            @extend %text-center;
+            @extend %Lobstertwo;
+            @include font-shorthand(46px, 400, 63px);
+            @media (max-width: $screen-xs-max) {
+                @include font-shorthand(29px, 400, 35px);
+        	}
+             
+        }
+        article {
+            &.post_thumbnail {
+                margin: 0 13px 33px 0;
+                padding: 0;
+                width: 32%;
+                padding-bottom: 12px;
+                border-bottom: 1px solid $BdColor;
+                a {
+                    position: relative;
+                    display: block;
+                }
+                figure {
+                    img {
+                        height: auto;
+                        max-width: 100%;
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                .post-title {
+                    color: $White;
+                    //@include bg-img-only(close_s, png, no-repeat, 97%, center);
+                    @include bg-img(thumb-title-bg, png, repeat, left, top);
+                    //background: rgba(244, 120, 62, 0.5);
+                    bottom: 0;
+                    font-size: 26px;
+                    left: 0;
+                    padding: 8px 0;
+                    position: absolute;
+                    width: 100%;
+                    @extend %Lobster;
+                    @extend %text-center;
+                }
+                .collection-number {
+                    color: $White;
+                    position: absolute;
+                    top: 12px;
+                    left: 20px;
+                    //text-shadow: 2px 2px #ff0000;
+                    @include text-shadow(0 2px 2px $text-color2);
+                    @extend %Lobster;
+                    @include font-shorthand(21px, 700, 25px);
+                }
+            }
+            &:nth-last-of-type(3n+1) {
+                margin-right: 0;
+            }
+            @media (max-width: $screen-xs-max) {
+                &.post_thumbnail {
+                    width: auto;
+                    margin: 0 52px 33px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                &:nth-child(3n+1) {
+                    margin: 0 52px 33px !important;
+                }
+            }
+        }
+    }
+}
+
+.single-collection {
+    .subscribe-form-wrapper {
+        display: none;
+    }
+}
