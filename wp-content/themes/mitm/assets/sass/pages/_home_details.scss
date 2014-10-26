@@ -1,15 +1,20 @@
 //
 // Home page details
 // --------------------------------------------------
-.home-detail { 
+.home-detail {
     padding-top: 43px;
     @extend %banner-img;
+    @media (max-width: $screen-xs-max) {
+        background: none;
+        padding-top: 0;
+    }
     .post-detail {
         margin: 0 27px 30px;
         img {
             //@include size(100%, auto);
             max-width: 100%;
             margin-bottom: 10px;
+            height: auto;
             //margin-right: 10px;
             &.alignright {
                 @extend %pull-right;
@@ -19,22 +24,31 @@
             margin: 0 0 24px;
             @include font-shorthand(21px, 400, 37px);
             &:nth-last-of-type(1) {
-            	 @extend %text-center;
-            	padding-top: 20px;
+                @extend %text-center;
+                padding-top: 20px;
                 border-top: 1px solid $BdColor;
             }
-
         }
         @media (max-width: $screen-xs-max) {
+            margin: 0 0 30px;
+            text-align: center;
+            img {
+                float: none !important;
+                margin-bottom: 4px;
+            }
             p {
-                margin: 0 0 20px;
+                margin: 0 0 8px;
+                clear: both;
                 @include font-shorthand(17px, 400, 31px);
+                &:nth-last-of-type(1) {
+                    padding-top: 13px;
+                }
             }
         }
     }
     .post-pagination {
         margin: 0 27px 7px;
-		padding: 20px 0 10px;
+        padding: 20px 0 10px;
         width: auto;
         border-bottom: 1px solid $BdColor;
         @extend %clear-both;
@@ -47,7 +61,7 @@
             @extend %MyriadPro;
         }
         .left, .right {
-        	margin-top: 48px;
+            margin-top: 48px;
         }
         .right a {
             padding-right: 28px;
@@ -69,17 +83,20 @@
                 display: block;
                 @extend %text-center;
                 &.post-no {
-                	@include font-shorthand(33px, 400, 54px);
+                    @include font-shorthand(33px, 400, 54px);
                 }
             }
         }
         @media (max-width: $screen-xs-max) {
-            margin: 20px auto 7px;
-            padding: 20px 0 10px;
+            margin: 0px auto 8px;
+            padding: 20px 0 18px;
             a {
                 letter-spacing: 0.4px;
                 @include size(50px, 28px);
                 font-size: 0;
+            }
+            .left, .right {
+                margin-top: 25px;
             }
             .right a {
                 padding-right: 24px;
@@ -92,16 +109,18 @@
             .post-title {
                 @include font-shorthand(29px, 400, 35px);
                 span {
-                 
-                &.post-no {
-                	@include font-shorthand(24px, 400, 35px);
+                    &.post-no {
+                        @include font-shorthand(24px, 400, 35px);
+                    }
                 }
-            }
             }
         }
     }
     .collection-post {
         margin: 30px 27px 30px;
+        @media (max-width: $screen-xs-max) {
+            margin: 30px 27px 10px;
+        }
         .gallery-title {
             font-style: italic;
             margin: 20px 0 19px;
@@ -111,9 +130,14 @@
             @extend %Lobstertwo;
             @include font-shorthand(46px, 400, 63px);
             @media (max-width: $screen-xs-max) {
+                padding-bottom: 0;
+                border-bottom: 0 none;
+                margin: 20px 0 15px;
                 @include font-shorthand(29px, 400, 35px);
-        	}
-             
+                .mob_view {
+                    display: block;
+                }
+            }
         }
         article {
             &.post_thumbnail {
@@ -136,9 +160,6 @@
                 }
                 .post-title {
                     color: $White;
-                    //@include bg-img-only(close_s, png, no-repeat, 97%, center);
-                    @include bg-img(thumb-title-bg, png, repeat, left, top);
-                    //background: rgba(244, 120, 62, 0.5);
                     bottom: 0;
                     font-size: 26px;
                     left: 0;
@@ -147,13 +168,13 @@
                     width: 100%;
                     @extend %Lobster;
                     @extend %text-center;
+                    @include bg-img(thumb-title-bg, png, repeat, left, top);
                 }
                 .collection-number {
                     color: $White;
                     position: absolute;
                     top: 12px;
                     left: 20px;
-                    //text-shadow: 2px 2px #ff0000;
                     @include text-shadow(0 2px 2px $text-color2);
                     @extend %Lobster;
                     @include font-shorthand(21px, 700, 25px);
@@ -177,10 +198,65 @@
             }
         }
     }
+    .desktop-collection-post {
+        @media (max-width: $screen-xs-max) {
+            display: none;
+        }
+    }
+    .mobile-collection-post {
+        display: none;
+        background-color: black;
+        clear: both;
+        @media (max-width: $screen-xs-max) {
+            display: block;
+            .collection-post {
+                margin: 0px 0 10px;
+                .owl-carousel {
+                    display: block;
+                    background-color: black;
+                    clear: both;
+                    // border:1px solid blue;
+                    article {
+                        @media (max-width: $screen-xs-max) {
+                            &.post_thumbnail {
+                                margin: 0 52px 0;
+                                padding: 0;
+                                border-bottom: 0 none;
+                            }
+                            &:nth-child(3n+1) {
+                                margin: 0 52px 0 !important;
+                            }
+                        }
+                    }
+                    .owl-buttons {
+                        div {
+                            top: 50%;
+                            display: block;
+                            position: absolute;
+                            text-indent: 999999px;
+                            @include size(18px, 27px);
+                            &.owl-next {
+                                right: 10px;
+                                @include bg-img-center(next_arrow, png);
+                            }
+                            &.owl-prev {
+                                left: 10px;
+                                @include bg-img-center(prev_arrow, png);
+                            }
+                        }
+                    }
+                }
+            }
+            /* DIRECTION CONTROLS (NEXT / PREV) */
+        }
+    }
 }
 
 .single-collection {
     .subscribe-form-wrapper {
         display: none;
+    }
+    header {
+        box-shadow: 0 0 10px #cccccc;
     }
 }
