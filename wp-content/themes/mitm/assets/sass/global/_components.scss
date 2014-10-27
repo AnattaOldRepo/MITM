@@ -29,9 +29,11 @@
 %block-center {
     margin: 0px auto;
 }
-%clear-both{
+
+%clear-both {
     clear: both;
 }
+
 //------------------------
 .blue-area {
     background: $Blue;
@@ -61,6 +63,30 @@
     background: $Orange;
 }
 
+%orderlist, %un-orderlist {
+    li:before {
+        color: $Orange;
+        padding-right: .25em;
+        position: relative;
+        top: .1em;
+    }
+}
+
+%orderlist {
+    counter-reset: item;
+    li:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+    }
+}
+
+%un-orderlist {
+    li:before {
+        content: "\2022";
+        /* /2022 is the numerical unicode for &bull; */
+    }
+}
+
 a {
     text-decoration: none;
     outline: 0 none;
@@ -71,7 +97,6 @@ a {
         background-color: $Orange;
         clear: both;
         display: table;
-        
         &:hover {
             text-decoration: none;
             color: $Black;
@@ -102,6 +127,7 @@ td {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
+
 /*::-webkit-input-placeholder {
    color: $text-color2;
 }*/
@@ -163,7 +189,6 @@ td {
 }
 
 .social-links {
-    
     a {
         display: inline-block;
         text-indent: 99999px;
@@ -182,29 +207,30 @@ td {
 }
 
 p {
-
     @extend %pharagraph-level-1;
 }
+
 %banner-img {
-     
     background: url(../images/net_img.png) repeat-x left top;
-    figure {position: relative;
-            z-index: -1;
-            background-position: center top;
-            background-repeat: no-repeat;
-            
-            img {
+    figure {
+        position: relative;
+        z-index: -1;
+        background-position: center top;
+        background-repeat: no-repeat;
+        img {
             //position: relative;
             //z-index: -1;
             margin: auto;
-            @media (max-width: $screen-sm-min) { @include size(100%, auto);}
+            @media (max-width: $screen-sm-min) {
+                @include size(100%, auto);
             }
         }
+    }
 }
+
 %width-960 {
     width: 960px;
-     @media (max-width: $screen-sm-min) { width: 100%;}
- }
-
-
-
+    @media (max-width: $screen-sm-min) {
+        width: 100%;
+    }
+}

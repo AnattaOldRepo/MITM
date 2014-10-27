@@ -13,8 +13,10 @@
             background-color: $Gray;
             padding: 20px 0;
             display: block;
+            font-style: italic;
             @include size(100%, auto);
-            @extend %heading-level-3;
+            @include font-shorthand(28px, normal, 28px);
+            @extend %Lobstertwo;
             @extend %text-center;
             span {
                 display: block;

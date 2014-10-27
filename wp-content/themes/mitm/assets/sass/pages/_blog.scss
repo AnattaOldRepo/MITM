@@ -7,16 +7,48 @@
     @media (max-width: $screen-sm-min) {
         width: 100%;
     }
-    h2 {
-        @extend %text-center;
-        @extend %heading-level-2;
+    h1, h2 {
         font-style: italic;
         margin: 35px 0 30px;
+        @extend %text-center;
+        @extend %heading-level-2;
+    }
+    h3 {
+        font-style: italic;
+        margin: 30px 0 25px;
+        @extend %text-center;
+        @include font-shorthand(29px, normal, 28px);
+        @extend %Lobstertwo;
     }
     h4 {
         @extend %text-center;
         @extend %heading-level-5;
         margin-top: 35px;
+    }
+    h5 {
+        margin-top: 30px;
+        @extend %text-center;
+        @extend %heading-level-6;
+    }
+    h6 {
+        margin-top: 25px;
+        @extend %text-center;
+        @extend %heading-level-7;
+    }
+    p, li {
+        @extend %pharagraph-level-1;
+        @media (max-width: $screen-xs-max) {
+            @include font-shorthand(17px, normal, 31px);
+        }
+    }
+    img {
+        margin-bottom: 38px;
+        height: auto;
+        max-width: 100%;
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
     }
     .banner-img {
         margin: auto;
@@ -32,12 +64,13 @@
         }
         @media (max-width: $screen-xs-max) {
             figure {
-               background-position:center top;
+                background-position: center top;
                 img {
                     display: none;
                 }
                 &.studio-page-banner {
                     //@include bg-img-center(mob-studio-banner, jpg);
+               
                 }
             }
         }
@@ -57,12 +90,20 @@
         .post-title {
             font-style: italic;
             margin: 0 60px 20px 0;
-            min-height: 90px;font-weight: 700;
+            min-height: 90px;
+            font-weight: 700;
             @extend %heading-level-2;
-            
         }
-        .post-image {
-            margin-bottom: 38px;
+        .post-detail {
+            ul, ol {
+                margin: 20px 0;
+            }
+            ul {
+                @extend %un-orderlist;
+            }
+            ol {
+                @extend %orderlist;
+            }
         }
         .read-more {
             position: absolute;
@@ -111,19 +152,17 @@
             }
         }
         @media (max-width: $screen-xs-max) {
-            //border: 1px solid red;
-            //@extend %pull-none;
             margin-top: 20px;
             padding-top: 46px;
             .post-title {
                 @include font-shorthand(29px, 700, 35px);
                 margin: 0 30px 30px;
+                min-height: inherit;
             }
             section {
                 float: none;
                 margin: 0 0 20px;
                 @include size(auto, auto);
-                //@extend %pull-right;
                 .post-image {
                     margin-bottom: 0;
                     img {
@@ -134,23 +173,24 @@
                     }
                 }
                 .post-detail {
-                    margin-left: 30px;
-                    margin-right: 30px;
-                    padding-bottom: 20px;
-                    border-bottom: 1px solid $BdColor;
-                    p {
-                        @include font-shorthand(17px, normal, 31px);
+                    margin-left: 0px;
+                    margin-right: 0px;
+                    h1, h2, h3, h4, h5, h6, p, ol, ul {
+                        margin-left: 30px;
+                        margin-right: 30px;
                     }
                 }
             }
             .read-more {
-                margin-left: 30px;
                 position: static;
                 top: 0;
+                border-top: 1px solid $BdColor;
+                margin: 0px 30px;
+                padding-top: 20px;
             }
             .social-links {
                 float: right;
-                margin: 20px 30px 0 0;
+                margin: 40px 30px 0 0;
                 @include size(auto, auto);
                 ul {
                     li {
@@ -242,21 +282,23 @@
             .post-title {
                 text-align: center;
             }
+            .post-detail {
+                border-bottom: 0 none;
+                padding-bottom: 0;
+            }
         }
         @media (max-width: $screen-xs-max) {
             .post-section {
                 .social-links {
+                    border-top: 1px solid $BdColor;
                     float: none;
                     text-align: center;
-                    margin: 0 auto;
+                    margin: 30px 30px 10px;
+                    padding-top: 20px;
                 }
             }
         }
     }
-}
-
-.site-content {
-    //border: 2px solid yellow;
 }
 
 .blog, .single-post {
