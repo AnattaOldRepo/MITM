@@ -14,10 +14,8 @@
 get_header(); ?>
 	<div id="primary" class="blog-page">
 		<div class="banner-img">
-		<figure style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg)">
-		<!--<img src="<?php //echo get_template_directory_uri(); ?>/assets/images/blog-hero.jpg"  />-->
-	</figure>
-	</div>
+			<figure class="studio-page-banner " style="background-image:url(<?php the_field( 'banner' ) ?>)"></figure>
+		</div>
 		<div id="main" class="container" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
