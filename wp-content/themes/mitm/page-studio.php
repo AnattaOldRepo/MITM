@@ -20,7 +20,14 @@ get_header();
 					<h4 class="toolheading"><?php the_field( 'my_tool_table_heading' ) ?></h4>
 					<div class="desktop-tools">
 						<div class="tools-list">
-							<?php the_field( 'my_tool_table' ) ?>
+							<?php foreach( get_field( 'my_tool_table_rows' ) as $row ) : ?>
+								<ul>
+									<li><a href="#<?php echo strtolower( str_replace( ' ', '_', $row['first_column_label'] ) )?>"><?php echo $row['first_column_label'] ?></a></li>
+									<li><a href="#<?php echo strtolower( str_replace( ' ', '_', $row['second_column_label'] ) )?>"><?php echo $row['second_column_label'] ?></a></li>
+									<li><a href="#<?php echo strtolower( str_replace( ' ', '_', $row['third_column_label'] ) )?>"><?php echo $row['third_column_label'] ?></a></li>
+									<li><a href="#<?php echo strtolower( str_replace( ' ', '_', $row['fourth_column_label'] ) )?>"><?php echo $row['fourth_column_label'] ?></a></li>
+								</ul>
+							<?php endforeach; ?>
 						</div>
 						<?php foreach ( get_field('my_tool_images_with_description') as $sections ) : ?>
 							<?php if ( !empty( $sections['heading'] ) ) : ?>
