@@ -9,10 +9,16 @@ get_header();
 		<figure class="studio-page-banner " style="background-image:url(<?php the_field( 'banner' ) ?>)">
 		</figure>
 	</div>
-	<div class="">
+	<div>
 		<div class="row">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>
+				
+				<div class="page-section">
+					<div class="wp-content-section">
+						<?php the_content(); ?>
+					</div>
+				</div>
+				
 				<div class="page-section">
 					<!-- my tool section -->
 					<h4><?php the_field( 'my_tool_heading' ) ?></h4>
