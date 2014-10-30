@@ -30,9 +30,9 @@ get_header(); ?>
 					</section>
 				<div class="social-links">
 					<ul>
-						<li class="facebook"><a href="#">Facebook</a></li>
-						<li class="twitter"><a href="#">Twitter</a></li>
-						<li class="pinterest"><a href="#">Pinterest</a></li>
+						<li class="facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?u=<?php echo rawurlencode( get_permalink() ) ; ?>">Facebook</a></li>
+						<li class="twitter"><a target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo rawurlencode( get_permalink() ); ?>&text=<?php echo rawurlencode( get_the_title() ); ?>&via=mitm">Twitter</a></li>
+						<li class="pinterest"><a target="_blank" href="https://www.pinterest.com/pin/create/button/?url=<?php echo rawurlencode( get_permalink() ); ?>&media=<?php echo rawurlencode( get_the_post_thumbnail() ); ?>&description=<?php echo rawurlencode( get_the_title() ); ?>">Pinterest</a></li>
 					</ul>
 				</div>
 				<div class="read-more">

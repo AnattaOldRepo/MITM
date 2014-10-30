@@ -24,9 +24,9 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
 			<div class="social-links">
-				<a class="facebook" href="#">Facebook</a>
-				<a class="twitter" href="#">Twitter</a>
-				<a class="pinterest" href="#">Pinterest</a>
+				<a class="facebook" href="<?php echo get_field( 'facebook_url', 'option' ) ?>">Facebook</a>
+				<a class="twitter" href="<?php echo get_field( 'twitter_url', 'option' ) ?>">Twitter</a>
+				<a class="pinterest" href="<?php echo get_field( 'pinterest_url', 'option' ) ?>">Pinterest</a>
 			</div>
 			<div class="copy-right">
 			<?php echo get_field( 'copyright', 'option' ) ?>
