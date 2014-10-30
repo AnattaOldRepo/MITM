@@ -225,9 +225,9 @@
             }
         }
     }
-    .row.writer-section {
+    .wp-content-section {
         margin: 0 0 25px;
-        .section-title {
+        h2 {
             padding: 45px 90px;
             @include font-shorthand(43px, normal, 52px);
             @extend %text-center;
@@ -242,8 +242,8 @@
             display: table;
         }
         @include clearfix;
-        figure {
-            margin: 0 18px 0 0;
+        .alignleft {
+            margin: 0 0 0 5px;
             @extend %pull-left;
             @media (max-width: $screen-xs-max) {
                 margin: 0 0 30px 0;
@@ -251,8 +251,8 @@
                 @include size(100%, auto);
             }
         }
-        article {
-            width: 505px;
+        .wirter-nick {
+            width: 555px;
             line-height: 34px;
             @extend %article;
             @extend %pull-right;
@@ -260,22 +260,26 @@
                 margin-top: 22px;
                 padding: 0px 19px 0 0;
                 overflow: hidden;
-                span {
-                    color: $White;
-                    background-color: $Black;
-                    font-family: arial;
-                    font-size: 20px;
-                    font-weight: 400;
-                    height: auto;
-                    line-height: 5px;
-                    margin: 0px 10px 0 0;
-                    display: inline-block;
-                    padding: 16px 0;
-                    text-align: center;
-                    width: 38px;
-                }
+                text-decoration: none;
                 @include clearfix;
+                &:before {
+                content: "+";
+                color: $White;
+                background-color: $Black;
+                font-family: arial;
+                font-size: 20px;
+                font-weight: 400;
+                height: auto;
+                line-height: 5px;
+                margin: 0px 10px 0 0;
+                display: inline-block;
+                padding: 16px 0;
+                text-align: center;
+                width: 38px;
+                bottom: 1px solid red;
             }
+            }
+             
             @media (max-width: $screen-xs-max) {
                 text-align: center;
                 @include size(100%, auto);
