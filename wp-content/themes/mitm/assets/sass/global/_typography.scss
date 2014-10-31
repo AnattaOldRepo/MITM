@@ -89,10 +89,6 @@
     @extend %MyriadPro;
     @include font-shorthand(17px, normal, 25px);
 }
-%roman-no-2 {
-    @extend %MyriadPro;
-    @include font-shorthand(12px, normal, 14px);
-}
 
 %article {
     @extend %merriweather;

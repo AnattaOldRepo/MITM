@@ -50,7 +50,7 @@ body {
         padding-top: 46px;
         input:-webkit-placeholder {
             color: $text-color4;
-            border:1px solid red !important;
+            border: 1px solid red !important;
         }
         input::-moz-placeholder {
             color: $text-color4;
@@ -75,7 +75,6 @@ body {
             @include size(370px, 55px);
             @extend %Raleway;
         }
-
         button {
             text-transform: uppercase;
             color: $White;
@@ -109,5 +108,42 @@ body {
                 @include size(100%, 45px);
             }
         }
+    }
+}
+
+.wp-content-section {
+    h2 {
+        padding: 45px 90px;
+        @include font-shorthand(43px, normal, 52px);
+        @extend %text-center;
+        @extend %Lobster;
+        @media (max-width: $screen-xs-max) {
+            padding: 5px 40px 15px;
+            @include font-shorthand(29px, 500, 35px);
+        }
+    }
+    h3 {
+        color: $White;
+        padding: 34px 20px;
+        margin: 38px auto 38px;
+        //height: 100px;
+         
+        font-style: italic;
+        @extend %Lobstertwo;
+        @include bg-img-center(orange-patterns, png, repeat);
+        @include font-shorthand(28px, bold, 33px);
+        @extend %text-center;
+        @media (max-width: $screen-xs-max) {
+            padding: 20px 30px;
+            margin: 25px auto;
+            @include font-shorthand(23px, bold, 31px);
+        }
+        &.gray-patterns {
+            @include bg-img-center(gray-patterns, png, repeat);
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
