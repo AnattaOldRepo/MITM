@@ -30,6 +30,10 @@
                 min-height: 114px;
                 @include font-shorthand(20px, 700, 24px);
             }
+            a {
+                color: $White;
+                text-decoration: none;
+            }
         }
         figure {
             background: url(../images/net_img.png) repeat-x left top;
