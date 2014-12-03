@@ -4,15 +4,26 @@
 		<?php foreach ( $_acf_data['slides'] as $slides ) { ?>
 			<?php if ( isset( $slides['image'] )  && ! empty( $slides['image'] ) ) { ?>
 				<div class="item">
-					
 					<?php if ( isset( $slides['title'] )  && ! empty( $slides['title'] ) ) { ?>
 						<div class="title">
-							<span>~</span><?php echo $slides['title'] ?>
+							<?php if ( ! empty( $slides['link'] ) ): ?>
+								<a href="<?php echo $slides['link'] ?>"><span>~</span><?php echo $slides['title'] ?></a>
+							<?php else: ?>
+								<span>~</span><?php echo $slides['title'] ?>
+							<?php endif; ?>
 						</div>
 					<?php } ?>
-					<figure>
-						<img src="<?php echo $slides['image'] ?>" alt="" />
-					</figure>
+					<?php if ( ! empty( $slides['link'] ) ): ?>
+						<a href="<?php echo $slides['link'] ?>">
+							<figure>
+								<img src="<?php echo $slides['image'] ?>" alt="" />
+							</figure>
+						</a>
+					<?php else: ?>
+						<figure>
+							<img src="<?php echo $slides['image'] ?>" alt="" />
+						</figure>
+					<?php endif; ?>
 				</div>
 			<?php } ?>
 		<?php } ?>

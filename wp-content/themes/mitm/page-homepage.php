@@ -10,7 +10,7 @@ get_header(); ?>
 			include locate_template( 'acf-layouts/home-' . $field[ 'acf_fc_layout' ] . '.php' );
 		}
 	?>
-	<div class="bottom-text-section">
+	<div class="wp-content-section">
 		<?php the_content() ?>
 	</div>
 	</div>
