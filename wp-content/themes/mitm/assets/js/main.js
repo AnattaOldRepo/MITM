@@ -1,5 +1,8 @@
 (function($) {
     $(document).ready(function() {
+
+
+        $('.fancybox').fancybox();
          
         /*----- Contact Us ----------*/
         $('.contact-us').on('click', function() {

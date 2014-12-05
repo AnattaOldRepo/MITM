@@ -10,6 +10,40 @@
     }
     .post-detail {
         margin: 0 27px 30px;
+        h2{
+            font-style: italic;
+            margin: 20px 0 19px;
+            padding-bottom: 13px;
+            @extend %text-center;
+            @extend %Lobstertwo;
+            @include font-shorthand(46px, 400, normal);
+            @media (max-width: $screen-xs-max) {
+                padding-bottom: 0;
+                border-bottom: 0 none;
+                margin: 20px 0 15px;
+                @include font-shorthand(29px, 400, 35px);
+                .mob_view {
+                    display: block;
+                }
+            }
+        }
+        h3{
+            font-style: italic;
+            margin: 20px 0 19px;
+            padding-bottom: 13px;
+            @extend %text-center;
+            @extend %Lobstertwo;
+            @include font-shorthand(35px, 400, normal);
+            @media (max-width: $screen-xs-max) {
+                padding-bottom: 0;
+                border-bottom: 0 none;
+                margin: 20px 0 15px;
+                @include font-shorthand(29px, 400, 35px);
+                .mob_view {
+                    display: block;
+                }
+            }
+        }
         img {
             //@include size(100%, auto);
             max-width: 100%;
@@ -23,11 +57,6 @@
         p {
             margin: 0 0 24px;
             @include font-shorthand(21px, 400, 37px);
-            &:nth-last-of-type(1) {
-                @extend %text-center;
-                padding-top: 20px;
-                border-top: 1px solid $BdColor;
-            }
         }
         @media (max-width: $screen-xs-max) {
             margin: 0 0 30px;
@@ -43,6 +72,16 @@
                 &:nth-last-of-type(1) {
                     padding-top: 13px;
                 }
+            }
+        }
+
+        .post-image-gallery{
+            overflow: hidden;
+            border-top: 1px solid $BdColor;
+            padding-top: 20px;
+            img{
+                float: left;
+                margin-bottom: 0;
             }
         }
     }
