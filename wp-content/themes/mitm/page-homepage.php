@@ -11,7 +11,7 @@ get_header(); ?>
 		}
 	?>
 	<div class="wp-content-section">
-		<?php the_content() ?>
+		<?php echo $post->post_content ?>
 	</div>
 	</div>
 </div>
