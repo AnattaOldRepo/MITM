@@ -1,18 +1,10 @@
 <?php $_acf_data = $field; ?>
+<div class="slider-title"><span>~</span>Custom Built Furniture, That Makes A Statement</div>
 <div id="owl-carousel" class="owl-carousel owl-theme">
 	<?php if ( is_array( $_acf_data['slides'] ) ) { ?>
 		<?php foreach ( $_acf_data['slides'] as $slides ) { ?>
 			<?php if ( isset( $slides['image'] )  && ! empty( $slides['image'] ) ) { ?>
 				<div class="item">
-					<?php if ( isset( $slides['title'] )  && ! empty( $slides['title'] ) ) { ?>
-						<div class="title">
-							<?php if ( ! empty( $slides['link'] ) ): ?>
-								<a href="<?php echo $slides['link'] ?>"><span>~</span><?php echo $slides['title'] ?></a>
-							<?php else: ?>
-								<span>~</span><?php echo $slides['title'] ?>
-							<?php endif; ?>
-						</div>
-					<?php } ?>
 					<?php if ( ! empty( $slides['link'] ) ): ?>
 						<a href="<?php echo $slides['link'] ?>">
 							<figure>

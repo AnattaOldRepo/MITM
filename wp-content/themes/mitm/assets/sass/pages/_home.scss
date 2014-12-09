@@ -5,32 +5,32 @@
     header, footer {
         overflow: hidden;
     }
+    .slider-title {
+        color: $White;
+        background-color: $Gray;
+        padding: 20px 0;
+        display: block;
+        font-style: italic;
+        @include size(100%, auto);
+        @include font-shorthand(28px, normal, 28px);
+        @extend %Lobstertwo;
+        @extend %text-center;
+        span {
+            display: block;
+            font-size: 55px;
+            line-height: 12px;
+            margin-top: 14px;
+        }
+        @media (max-width: $screen-xs-max) {
+            padding: 20px 30px;
+            width: auto;
+            min-height: 114px;
+            @include font-shorthand(20px, 700, 24px);
+        }
+    }
     .owl-carousel {
         //max-width: 750px;
         //margin: 0px auto;
-        .title {
-            color: $White;
-            background-color: $Gray;
-            padding: 20px 0;
-            display: block;
-            font-style: italic;
-            @include size(100%, auto);
-            @include font-shorthand(28px, normal, 28px);
-            @extend %Lobstertwo;
-            @extend %text-center;
-            span {
-                display: block;
-                font-size: 55px;
-                line-height: 12px;
-                margin-top: 14px;
-            }
-            @media (max-width: $screen-xs-max) {
-                padding: 20px 30px;
-                width: auto;
-                min-height: 114px;
-                @include font-shorthand(20px, 700, 24px);
-            }
-        }
         figure {
             background: url(../images/net_img.png) repeat-x left -30px;
             text-align: center;
@@ -109,7 +109,6 @@
         @media (min-width: $screen-sm-min) {
             margin-top: 85px;
         }
-
         p {
             margin: 14px 30px 0;
             @extend %text-center;
@@ -268,23 +267,22 @@
                 text-decoration: none;
                 @include clearfix;
                 &:before {
-                content: "+";
-                color: $White;
-                background-color: $Black;
-                font-family: arial;
-                font-size: 20px;
-                font-weight: 400;
-                height: auto;
-                line-height: 5px;
-                margin: 0px 10px 0 0;
-                display: inline-block;
-                padding: 16px 0;
-                text-align: center;
-                width: 38px;
-                bottom: 1px solid red;
+                    content: "+";
+                    color: $White;
+                    background-color: $Black;
+                    font-family: arial;
+                    font-size: 20px;
+                    font-weight: 400;
+                    height: auto;
+                    line-height: 5px;
+                    margin: 0px 10px 0 0;
+                    display: inline-block;
+                    padding: 16px 0;
+                    text-align: center;
+                    width: 38px;
+                    bottom: 1px solid red;
+                }
             }
-            }
-             
             @media (max-width: $screen-xs-max) {
                 text-align: center;
                 @include size(100%, auto);
@@ -348,5 +346,3 @@
         text-indent: -99999px;
     }
 }
-
-
