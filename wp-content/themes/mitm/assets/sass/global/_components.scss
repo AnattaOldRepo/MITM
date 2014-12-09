@@ -279,6 +279,10 @@ p {
     margin-bottom: 10px;
 }
 
+.form-row label span{
+    color: red;
+}
+
 .form-row input, .form-row textarea{
     display: block;
     font-size: 14px;
