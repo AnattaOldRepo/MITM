@@ -293,7 +293,12 @@ p {
     background-color: #f4783e;
     border-color: #f4783e;
     color: #fff;
+    cursor: pointer;
 }
 
+span.wpcf7-not-valid-tip{
+    position: relative;
+    top: -20px;
+}
 
 
