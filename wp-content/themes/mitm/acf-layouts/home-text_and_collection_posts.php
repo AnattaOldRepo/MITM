@@ -18,20 +18,16 @@
 			<?php echo $_acf_data['collection_heading'] ?>
 		</div>
 		<?php } ?>
-		<?php if( isset( $_acf_data['collections'] ) && is_array( $_acf_data['collections'] ) ): ?>
-		
-		<?php foreach($_acf_data['collections'] as $post) : ?>
-		<?php setup_postdata($post); ?>
-		<article class="col-sm-4 col-md-4 col-lg-4 post_thumbnail">
-			<a href="<?php the_permalink() ?>"><figure>
-				<span class="collection-number"><?php the_field( 'collection_post_number' )  ?></span>
-				<?php the_post_thumbnail() ?>
-			</figure>
-			<div class="post-title"><?php the_title() ?></div>
-			</a>
-		</article>
-		<?php endforeach; ?>
-		
-		<?php wp_reset_postdata(); ?>
+		<?php if( isset( $_acf_data['collections_post'] ) && is_array( $_acf_data['collections_post'] ) ): ?>
+			<?php foreach($_acf_data['collections_post'] as $collection) : ?>
+				<article class="col-sm-4 col-md-4 col-lg-4 post_thumbnail">
+					<a href="<?php echo get_the_permalink( $collection['collection']->ID ) ?>"><figure>
+						<span class="collection-number"><?php echo get_field( 'collection_post_number', $collection['collection']->ID )  ?></span>
+						<?php echo get_the_post_thumbnail( $collection['collection']->ID ) ?>
+					</figure>
+					<div class="post-title"><?php echo get_the_title( $collection['collection']->ID ) ?></div>
+					</a>
+				</article>
+			<?php endforeach; ?>
 		<?php endif; ?>
 	</section>

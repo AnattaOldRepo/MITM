@@ -22,6 +22,7 @@ get_header(); ?>
 		</div>
 		<?php endwhile; // end of the loop. ?>
 		<div class="bottom-section">
+			<a href="/request-a-quote/" class="button orange gaq">get a quote</a>
 			<?php if ( get_field( 'related_collections' ) ) { ?>
 			<section class=" clearfix collection-post">
 				<div class="gallery-title-row">

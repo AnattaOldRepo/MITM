@@ -96,6 +96,7 @@ function mitm_scripts() {
 	wp_enqueue_style( 'mitm-style', get_template_directory_uri() . '/assets/css/app.css', array(), filemtime( get_template_directory() . '/assets/css/app.css' ) );
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', array(), filemtime( get_template_directory() . '/assets/css/app.css' ) );
 	wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/assets/css/owl.theme.css', array(), filemtime( get_template_directory() . '/assets/css/app.css' ) );
+	wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/assets/css/fancybox.css', array(), filemtime( get_template_directory() . '/assets/css/app.css' ) );
 	
 
 	wp_enqueue_script( 'mitm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -104,6 +105,7 @@ function mitm_scripts() {
 
 	wp_enqueue_script( 'mitm-main-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ));
 	wp_enqueue_script( 'mitm-owl-carousel-js', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array( 'jquery' ));
+	wp_enqueue_script( 'lightbox-js', get_template_directory_uri() . '/assets/js/fancybox.js', array( 'jquery' ));
 
 
 

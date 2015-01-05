@@ -186,6 +186,16 @@ td {
             background-color: rgba($Orange, 0.7);
         }
     }
+    &.gaq{
+    width: 170px;
+    margin: 0px auto;
+    float: none;
+    display: block;
+    padding: 12px 0;
+        &:hover{
+            text-decoration: none;
+        }
+    }
 }
 
 .social-links {
@@ -234,3 +244,69 @@ p {
         width: 100%;
     }
 }
+
+
+
+.form-row{
+    overflow:hidden;
+    margin: 0px auto;
+    @media (max-width: $screen-sm-min) {
+        padding: 0 20px;
+    }
+
+}
+
+.form-row .multi{
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+
+    @media (max-width: $screen-sm-min) {
+        width: 100%;
+        float: none;
+        padding-right: 0px
+    }
+}
+
+.form-row .multi:last-child{
+   padding-right: 0px;
+}
+
+.form-row label{
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    margin-bottom: 10px;
+}
+
+.form-row label span{
+    color: red;
+}
+
+.form-row input, .form-row textarea{
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    width: 100%;
+    border: 1px solid lightgray;
+    padding:10px;
+    margin-bottom: 30px;
+
+      @media (max-width: $screen-sm-min) {
+        width: 100%;
+    }
+}
+
+.form-row input.wpcf7-submit{
+    background-color: #f4783e;
+    border-color: #f4783e;
+    color: #fff;
+    cursor: pointer;
+}
+
+span.wpcf7-not-valid-tip{
+    position: relative;
+    top: -20px;
+}
+
+
