@@ -311,7 +311,6 @@
 
 .page-section {
     .success {
-        @include size(310px, auto);
         @include font-shorthand(21px, normal, normal);
         padding: 8px 0 8px 0;
         text-align: center;
