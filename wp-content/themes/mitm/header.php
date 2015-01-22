@@ -66,7 +66,7 @@
 										<div class="form">
 											<input name="name" type="text" class="name input-text" placeholder="name">
 											<input name="email" type="text" class="email input-text" placeholder="email id">
-											<textarea name="message" class="input-text" placeholder="Hello! Your message."></textarea>
+											<textarea name="content" class="input-text" placeholder="Hello! Your message."></textarea>
 											<input type="submit" class="button orange" value="send">
 										</div>
 									</form>
