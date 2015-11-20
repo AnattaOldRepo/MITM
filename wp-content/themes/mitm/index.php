@@ -54,13 +54,15 @@ get_header(); ?>
 			</div>
 	</div><!-- #primary -->
 
-<script type="text/javascript">
-  $(document).ready(function(){
-  		$('.bxslider').bxSlider({
-		  mode: 'fade',
-		  captions: true
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+			if( typeof bxSlider == 'function' ) {
+				$('.bxslider').bxSlider({
+					mode: 'fade',
+					captions: true
+				});
+			}
 		});
-  });
-</script>
+	</script>
 
 <?php get_footer(); ?>
