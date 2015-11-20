@@ -3,8 +3,8 @@ Contributors: ibabar
 Donate link: http://donate.ibabar.com
 Tags: prettyPhoto, thickbox, lightbox, WordPress likghtbox, fancybox, popup, pop up, pop up box
 Requires at least: 3.1
-Tested Up to: 3.8
-Stable Tag: 1.1
+Tested Up to: 4.2
+Stable Tag: 1.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,6 +47,10 @@ Nothing for now.
 Will add later.
 
 == Changelog ==
+
+Date: 20-05-2015
+Release version: 1.2
+Release Note: Updated the library to latest version.
 
 Date: 11-01-2013
 Released Version: 1.1
